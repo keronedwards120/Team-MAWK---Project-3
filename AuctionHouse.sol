@@ -1,13 +1,13 @@
-pragma solidity ^0.5.0;
+pragma solidity >=0.4.22 <0.6.1;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721Full.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/ownership/Ownable.sol";
 import "./Bidder.sol";
 import "./Seller.sol";
 
-contract MartianMarket is ERC721Full, Ownable {
+contract MawkMarket is ERC721Full, Ownable {
 
-    constructor() ERC721Full("MartianMarket", "MARS") public {}
+    constructor() ERC721Full("MawkMarket", "MARS") public {}
 
     using Counters for Counters.Counter;
 
@@ -15,7 +15,7 @@ contract MartianMarket is ERC721Full, Ownable {
 
     address payable foundation_address = msg.sender;
 
-    mapping(uint => MartianAuction) public auctions;
+    mapping(uint => MawkAuction) public auctions;
 
     modifier landRegistered(uint token_id) {
         require(_exists(token_id), "Land not registered!");
@@ -23,7 +23,7 @@ contract MartianMarket is ERC721Full, Ownable {
     }
 
     function createAuction(uint token_id) public onlyOwner {
-        auctions[token_id] = new MartianAuction(foundation_address);
+        auctions[token_id] = new MawkAuction(foundation_address);
     }
 
 //Move to seller contract
@@ -36,28 +36,28 @@ contract MartianMarket is ERC721Full, Ownable {
     }
 
     function endAuction(uint token_id) public (onlyOwner) landRegistered(token_id) {
-        MartianAuction auction = auctions[token_id];
+        MawkAuction auction = auctions[token_id];
         auction.auctionEnd();
         safeTransferFrom(owner(), auction.highestBidder(), token_id);
     }
 
     function auctionEnded(uint token_id) public view returns(bool) {
-        MartianAuction auction = auctions[token_id];
+        MawkAuction auction = auctions[token_id];
         return auction.ended();
     }
 
     function highestBid(uint token_id) public view landRegistered(token_id) returns(uint) {
-        MartianAuction auction = auctions[token_id];
+        MawkAuction auction = auctions[token_id];
         return auction.highestBid();
     }
 
     function pendingReturn(uint token_id, address sender) public view landRegistered(token_id) returns(uint) {
-        MartianAuction auction = auctions[token_id];
+        MawkAuction auction = auctions[token_id];
         return auction.pendingReturn(sender);
     }
 
     function bid(uint token_id) public payable landRegistered(token_id) {
-        MartianAuction auction = auctions[token_id];
+        MawkAuction auction = auctions[token_id];
         auction.bid.value(msg.value)(msg.sender);
     }
 
