@@ -1,5 +1,7 @@
 pragma solidity >=0.4.22 <0.6.0;
-
+import "./AuctionHouse.sol";
+import "./Interfaces/ISeller.sol";
+import "./Interfaces/ICommon.sol";
 contract Ibid {
     address payable public beneficiary;
 

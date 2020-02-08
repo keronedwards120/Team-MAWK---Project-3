@@ -4,10 +4,12 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/ownership/Ownable.sol";
 import "./Bidder.sol";
 import "./Seller.sol";
+import "./Interfaces/ISeller.sol";
+import "./Interfaces/ICommon.sol";
 
 contract MawkMarket is ERC721Full, Ownable {
 
-    constructor() ERC721Full("MawkMarket", "MARS") public {}
+    constructor() ERC721Full("MawkMarket", "MAWK") public {}
 
     using Counters for Counters.Counter;
 

@@ -1,6 +1,7 @@
 pragma solidity >=0.4.22 <=0.6.1;
 
 //import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/drafts/Counters.sol";
+import "./AuctionHouse.sol";
 import "./Interfaces/ISeller.sol";
 import "./Interfaces/ICommon.sol";
 contract Seller is ISeller,ICommon{
