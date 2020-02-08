@@ -2,6 +2,7 @@ pragma solidity >=0.4.22 <0.6.0;
 import "./AuctionHouse.sol";
 import "./Interfaces/ISeller.sol";
 import "./Interfaces/ICommon.sol";
+
 contract Ibid {
     address payable public beneficiary;
 
@@ -82,6 +83,7 @@ contract Ibid {
     function pendingReturn(address sender) public view returns (uint) {
         return pendingReturns[sender];
     }
+    
 
     /// End the auction and send the highest bid
     /// to the beneficiary.
@@ -110,4 +112,21 @@ contract Ibid {
         // 3. Interaction
         beneficiary.transfer(highestBid);
     }
-}
+        
+   /* // function revealWinners() public onlyOwner{
+
+        for (uint id = 0; id < 3; id++) {
+            Item storage currentItem=items[id];
+            if(currentItem.itemTokens.length != 0){
+              uint randomIndex = (block.number / currentItem.itemTokens.length)% currentItem.itemTokens.length; 
+              uint winnerId = currentItem.itemTokens[randomIndex];
+               winners[id] = bidders[winnerId].addr;           
+            }
+        }
+    }  */
+
+    /* function getPersonDetails(uint id) public constant returns(uint,uint,address){
+        return (bidders[id].remainingTokens,bidders[id].personId,bidders[id].addr);
+    }
+
+} */

@@ -4,8 +4,5 @@ pragma solidity >=0.4.22 <=0.6.1;
 import "./ICommon.sol";
 
 interface ISeller {
-   
-    event RegisterItem(address owner,string reference_uri,uint amount);
-    
-
+    event RegisterSeller(address seller);
 }

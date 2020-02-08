@@ -18,6 +18,7 @@ contract MawkMarket is ERC721Full, Ownable {
     address payable foundation_address = msg.sender;
 
     mapping(uint => MawkAuction) public auctions;
+    
 
     modifier landRegistered(uint token_id) {
         require(_exists(token_id), "Land not registered!");
