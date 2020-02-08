@@ -5,5 +5,5 @@ interface ICommon{
     struct Item{
         address owner;
         string uri;
-    }
+    } 
 }
