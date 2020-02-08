@@ -1,0 +1,651 @@
+{
+    "contracts": {
+        "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol": {
+            "ICommon": {
+                "abi": [],
+                "devdoc": {
+                    "methods": {}
+                },
+                "evm": {
+                    "bytecode": {
+                        "linkReferences": {},
+                        "object": "",
+                        "opcodes": "",
+                        "sourceMap": ""
+                    },
+                    "deployedBytecode": {
+                        "linkReferences": {},
+                        "object": "",
+                        "opcodes": "",
+                        "sourceMap": ""
+                    },
+                    "gasEstimates": null,
+                    "methodIdentifiers": {}
+                },
+                "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":\"ICommon\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":{\"keccak256\":\"0x03447080ce22c7272d2fdc1cd7ad15866d07c865b537e84975afa6771e4b5ec3\",\"urls\":[\"bzz-raw://547cb71f8229d0edabe4de710ce519b814d4f18c326718a0fdcd7da56b9006ac\",\"dweb:/ipfs/QmQRq7QRF31aogbVinB84rkZm5zthwGbboTqx5d6HGaRTZ\"]}},\"version\":1}",
+                "userdoc": {
+                    "methods": {}
+                }
+            }
+        },
+        "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol": {
+            "ISeller": {
+                "abi": [
+                    {
+                        "anonymous": false,
+                        "inputs": [
+                            {
+                                "indexed": false,
+                                "internalType": "address",
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "indexed": false,
+                                "internalType": "string",
+                                "name": "reference_uri",
+                                "type": "string"
+                            },
+                            {
+                                "indexed": false,
+                                "internalType": "uint256",
+                                "name": "amount",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "RegisterItem",
+                        "type": "event"
+                    }
+                ],
+                "devdoc": {
+                    "methods": {}
+                },
+                "evm": {
+                    "bytecode": {
+                        "linkReferences": {},
+                        "object": "",
+                        "opcodes": "",
+                        "sourceMap": ""
+                    },
+                    "deployedBytecode": {
+                        "linkReferences": {},
+                        "object": "",
+                        "opcodes": "",
+                        "sourceMap": ""
+                    },
+                    "gasEstimates": null,
+                    "methodIdentifiers": {}
+                },
+                "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"reference_uri\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"RegisterItem\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol\":\"ISeller\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":{\"keccak256\":\"0x03447080ce22c7272d2fdc1cd7ad15866d07c865b537e84975afa6771e4b5ec3\",\"urls\":[\"bzz-raw://547cb71f8229d0edabe4de710ce519b814d4f18c326718a0fdcd7da56b9006ac\",\"dweb:/ipfs/QmQRq7QRF31aogbVinB84rkZm5zthwGbboTqx5d6HGaRTZ\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol\":{\"keccak256\":\"0xcf38423cb9d51d143355cfed7556e94c665ab8d04afdc972409426a7812c241f\",\"urls\":[\"bzz-raw://5c7387c3532644efc0badf9dc832fab2979d4fc2a2852e67c76de3934094cc40\",\"dweb:/ipfs/QmQHndXmR8DG9wV67RXC4VmNLLwkdQAkec21gWRKih54YC\"]}},\"version\":1}",
+                "userdoc": {
+                    "methods": {}
+                }
+            }
+        },
+        "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol": {
+            "Seller": {
+                "abi": [
+                    {
+                        "anonymous": false,
+                        "inputs": [
+                            {
+                                "indexed": false,
+                                "internalType": "address",
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "indexed": false,
+                                "internalType": "string",
+                                "name": "reference_uri",
+                                "type": "string"
+                            },
+                            {
+                                "indexed": false,
+                                "internalType": "uint256",
+                                "name": "amount",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "RegisterItem",
+                        "type": "event"
+                    }
+                ],
+                "devdoc": {
+                    "methods": {}
+                },
+                "evm": {
+                    "bytecode": {
+                        "linkReferences": {},
+                        "object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220fdd1355d48c8d51e43762248f2352c2ce3c78f1d92846f66e7753308a74b7a0664736f6c63430006010033",
+                        "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 REVERT 0xD1 CALLDATALOAD 0x5D 0x48 0xC8 0xD5 0x1E NUMBER PUSH23 0x2248F2352C2CE3C78F1D92846F66E7753308A74B7A0664 PUSH20 0x6F6C634300060100330000000000000000000000 ",
+                        "sourceMap": "219:113:2:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;219:113:2;;;;;;;"
+                    },
+                    "deployedBytecode": {
+                        "linkReferences": {},
+                        "object": "6080604052600080fdfea2646970667358221220fdd1355d48c8d51e43762248f2352c2ce3c78f1d92846f66e7753308a74b7a0664736f6c63430006010033",
+                        "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 REVERT 0xD1 CALLDATALOAD 0x5D 0x48 0xC8 0xD5 0x1E NUMBER PUSH23 0x2248F2352C2CE3C78F1D92846F66E7753308A74B7A0664 PUSH20 0x6F6C634300060100330000000000000000000000 ",
+                        "sourceMap": "219:113:2:-:0;;;;;"
+                    },
+                    "gasEstimates": {
+                        "creation": {
+                            "codeDepositCost": "12600",
+                            "executionCost": "66",
+                            "totalCost": "12666"
+                        }
+                    },
+                    "methodIdentifiers": {}
+                },
+                "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"reference_uri\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"RegisterItem\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol\":\"Seller\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":{\"keccak256\":\"0x03447080ce22c7272d2fdc1cd7ad15866d07c865b537e84975afa6771e4b5ec3\",\"urls\":[\"bzz-raw://547cb71f8229d0edabe4de710ce519b814d4f18c326718a0fdcd7da56b9006ac\",\"dweb:/ipfs/QmQRq7QRF31aogbVinB84rkZm5zthwGbboTqx5d6HGaRTZ\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol\":{\"keccak256\":\"0xcf38423cb9d51d143355cfed7556e94c665ab8d04afdc972409426a7812c241f\",\"urls\":[\"bzz-raw://5c7387c3532644efc0badf9dc832fab2979d4fc2a2852e67c76de3934094cc40\",\"dweb:/ipfs/QmQHndXmR8DG9wV67RXC4VmNLLwkdQAkec21gWRKih54YC\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol\":{\"keccak256\":\"0xec415536ce842065d18bcae91b8fd3d189e660977f024c06abd7bc30583a1e2d\",\"urls\":[\"bzz-raw://5446bef02fdcd880d9ec062a1954ece82f0ba3248e9da7979738a494b1ab07a1\",\"dweb:/ipfs/QmZGvVcNd65tzX9U6pYvgqxRAVYNvXfJarzcdVidCxR6hD\"]}},\"version\":1}",
+                "userdoc": {
+                    "methods": {}
+                }
+            }
+        }
+    },
+    "sources": {
+        "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol": {
+            "ast": {
+                "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol",
+                "exportedSymbols": {
+                    "ICommon": [
+                        8
+                    ]
+                },
+                "id": 9,
+                "nodeType": "SourceUnit",
+                "nodes": [
+                    {
+                        "id": 1,
+                        "literals": [
+                            "experimental",
+                            "ABIEncoderV2"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "0:33:0"
+                    },
+                    {
+                        "id": 2,
+                        "literals": [
+                            "solidity",
+                            ">=",
+                            "0.4",
+                            ".22",
+                            "<=",
+                            "0.6",
+                            ".1"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "35:33:0"
+                    },
+                    {
+                        "abstract": false,
+                        "baseContracts": [],
+                        "contractDependencies": [],
+                        "contractKind": "interface",
+                        "documentation": null,
+                        "fullyImplemented": true,
+                        "id": 8,
+                        "linearizedBaseContracts": [
+                            8
+                        ],
+                        "name": "ICommon",
+                        "nodeType": "ContractDefinition",
+                        "nodes": [
+                            {
+                                "canonicalName": "ICommon.Item",
+                                "id": 7,
+                                "members": [
+                                    {
+                                        "constant": false,
+                                        "id": 4,
+                                        "name": "owner",
+                                        "nodeType": "VariableDeclaration",
+                                        "overrides": null,
+                                        "scope": 7,
+                                        "src": "118:13:0",
+                                        "stateVariable": false,
+                                        "storageLocation": "default",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        },
+                                        "typeName": {
+                                            "id": 3,
+                                            "name": "address",
+                                            "nodeType": "ElementaryTypeName",
+                                            "src": "118:7:0",
+                                            "stateMutability": "nonpayable",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            }
+                                        },
+                                        "value": null,
+                                        "visibility": "internal"
+                                    },
+                                    {
+                                        "constant": false,
+                                        "id": 6,
+                                        "name": "uri",
+                                        "nodeType": "VariableDeclaration",
+                                        "overrides": null,
+                                        "scope": 7,
+                                        "src": "142:10:0",
+                                        "stateVariable": false,
+                                        "storageLocation": "default",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        },
+                                        "typeName": {
+                                            "id": 5,
+                                            "name": "string",
+                                            "nodeType": "ElementaryTypeName",
+                                            "src": "142:6:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_string_storage_ptr",
+                                                "typeString": "string"
+                                            }
+                                        },
+                                        "value": null,
+                                        "visibility": "internal"
+                                    }
+                                ],
+                                "name": "Item",
+                                "nodeType": "StructDefinition",
+                                "scope": 8,
+                                "src": "96:64:0",
+                                "visibility": "public"
+                            }
+                        ],
+                        "scope": 9,
+                        "src": "72:91:0"
+                    }
+                ],
+                "src": "0:163:0"
+            },
+            "id": 0
+        },
+        "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol": {
+            "ast": {
+                "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol",
+                "exportedSymbols": {
+                    "ISeller": [
+                        21
+                    ]
+                },
+                "id": 22,
+                "nodeType": "SourceUnit",
+                "nodes": [
+                    {
+                        "id": 10,
+                        "literals": [
+                            "experimental",
+                            "ABIEncoderV2"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "0:33:1"
+                    },
+                    {
+                        "id": 11,
+                        "literals": [
+                            "solidity",
+                            ">=",
+                            "0.4",
+                            ".22",
+                            "<=",
+                            "0.6",
+                            ".1"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "35:33:1"
+                    },
+                    {
+                        "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol",
+                        "file": "./ICommon.sol",
+                        "id": 12,
+                        "nodeType": "ImportDirective",
+                        "scope": 22,
+                        "sourceUnit": 9,
+                        "src": "72:23:1",
+                        "symbolAliases": [],
+                        "unitAlias": ""
+                    },
+                    {
+                        "abstract": false,
+                        "baseContracts": [],
+                        "contractDependencies": [],
+                        "contractKind": "interface",
+                        "documentation": null,
+                        "fullyImplemented": true,
+                        "id": 21,
+                        "linearizedBaseContracts": [
+                            21
+                        ],
+                        "name": "ISeller",
+                        "nodeType": "ContractDefinition",
+                        "nodes": [
+                            {
+                                "anonymous": false,
+                                "documentation": null,
+                                "id": 20,
+                                "name": "RegisterItem",
+                                "nodeType": "EventDefinition",
+                                "parameters": {
+                                    "id": 19,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 14,
+                                            "indexed": false,
+                                            "name": "owner",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 20,
+                                            "src": "148:13:1",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            },
+                                            "typeName": {
+                                                "id": 13,
+                                                "name": "address",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "148:7:1",
+                                                "stateMutability": "nonpayable",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        {
+                                            "constant": false,
+                                            "id": 16,
+                                            "indexed": false,
+                                            "name": "reference_uri",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 20,
+                                            "src": "162:20:1",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_string_memory_ptr",
+                                                "typeString": "string"
+                                            },
+                                            "typeName": {
+                                                "id": 15,
+                                                "name": "string",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "162:6:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_storage_ptr",
+                                                    "typeString": "string"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        {
+                                            "constant": false,
+                                            "id": 18,
+                                            "indexed": false,
+                                            "name": "amount",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 20,
+                                            "src": "183:11:1",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 17,
+                                                "name": "uint",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "183:4:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "147:48:1"
+                                },
+                                "src": "129:67:1"
+                            }
+                        ],
+                        "scope": 22,
+                        "src": "99:108:1"
+                    }
+                ],
+                "src": "0:209:1"
+            },
+            "id": 1
+        },
+        "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol": {
+            "ast": {
+                "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol",
+                "exportedSymbols": {
+                    "Seller": [
+                        38
+                    ]
+                },
+                "id": 39,
+                "nodeType": "SourceUnit",
+                "nodes": [
+                    {
+                        "id": 23,
+                        "literals": [
+                            "solidity",
+                            ">=",
+                            "0.4",
+                            ".22",
+                            "<=",
+                            "0.6",
+                            ".1"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "0:33:2"
+                    },
+                    {
+                        "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol",
+                        "file": "./Interfaces/ISeller.sol",
+                        "id": 24,
+                        "nodeType": "ImportDirective",
+                        "scope": 39,
+                        "sourceUnit": 22,
+                        "src": "147:34:2",
+                        "symbolAliases": [],
+                        "unitAlias": ""
+                    },
+                    {
+                        "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol",
+                        "file": "./Interfaces/ICommon.sol",
+                        "id": 25,
+                        "nodeType": "ImportDirective",
+                        "scope": 39,
+                        "sourceUnit": 9,
+                        "src": "183:34:2",
+                        "symbolAliases": [],
+                        "unitAlias": ""
+                    },
+                    {
+                        "abstract": false,
+                        "baseContracts": [
+                            {
+                                "arguments": null,
+                                "baseName": {
+                                    "contractScope": null,
+                                    "id": 26,
+                                    "name": "ISeller",
+                                    "nodeType": "UserDefinedTypeName",
+                                    "referencedDeclaration": 21,
+                                    "src": "238:7:2",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_contract$_ISeller_$21",
+                                        "typeString": "contract ISeller"
+                                    }
+                                },
+                                "id": 27,
+                                "nodeType": "InheritanceSpecifier",
+                                "src": "238:7:2"
+                            },
+                            {
+                                "arguments": null,
+                                "baseName": {
+                                    "contractScope": null,
+                                    "id": 28,
+                                    "name": "ICommon",
+                                    "nodeType": "UserDefinedTypeName",
+                                    "referencedDeclaration": 8,
+                                    "src": "246:7:2",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_contract$_ICommon_$8",
+                                        "typeString": "contract ICommon"
+                                    }
+                                },
+                                "id": 29,
+                                "nodeType": "InheritanceSpecifier",
+                                "src": "246:7:2"
+                            }
+                        ],
+                        "contractDependencies": [
+                            8,
+                            21
+                        ],
+                        "contractKind": "contract",
+                        "documentation": null,
+                        "fullyImplemented": true,
+                        "id": 38,
+                        "linearizedBaseContracts": [
+                            38,
+                            8,
+                            21
+                        ],
+                        "name": "Seller",
+                        "nodeType": "ContractDefinition",
+                        "nodes": [
+                            {
+                                "anonymous": false,
+                                "documentation": null,
+                                "id": 37,
+                                "name": "RegisterItem",
+                                "nodeType": "EventDefinition",
+                                "parameters": {
+                                    "id": 36,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 31,
+                                            "indexed": false,
+                                            "name": "owner",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 37,
+                                            "src": "281:13:2",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            },
+                                            "typeName": {
+                                                "id": 30,
+                                                "name": "address",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "281:7:2",
+                                                "stateMutability": "nonpayable",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        {
+                                            "constant": false,
+                                            "id": 33,
+                                            "indexed": false,
+                                            "name": "reference_uri",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 37,
+                                            "src": "295:20:2",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_string_memory_ptr",
+                                                "typeString": "string"
+                                            },
+                                            "typeName": {
+                                                "id": 32,
+                                                "name": "string",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "295:6:2",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_storage_ptr",
+                                                    "typeString": "string"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        {
+                                            "constant": false,
+                                            "id": 35,
+                                            "indexed": false,
+                                            "name": "amount",
+                                            "nodeType": "VariableDeclaration",
+                                            "overrides": null,
+                                            "scope": 37,
+                                            "src": "316:11:2",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 34,
+                                                "name": "uint",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "316:4:2",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "280:48:2"
+                                },
+                                "src": "262:67:2"
+                            }
+                        ],
+                        "scope": 39,
+                        "src": "219:113:2"
+                    }
+                ],
+                "src": "0:332:2"
+            },
+            "id": 2
+        }
+    }
+}

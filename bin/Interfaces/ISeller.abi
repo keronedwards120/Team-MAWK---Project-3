@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"owner","type":"address"},{"indexed":false,"internalType":"string","name":"reference_uri","type":"string"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"RegisterItem","type":"event"}]

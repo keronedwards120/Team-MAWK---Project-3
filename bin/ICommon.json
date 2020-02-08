@@ -1,0 +1,136 @@
+{
+    "contractName": "ICommon",
+    "abi": [],
+    "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/IBase.sol\":\"ICommon\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/IBase.sol\":{\"keccak256\":\"0x03447080ce22c7272d2fdc1cd7ad15866d07c865b537e84975afa6771e4b5ec3\",\"urls\":[\"bzz-raw://547cb71f8229d0edabe4de710ce519b814d4f18c326718a0fdcd7da56b9006ac\",\"dweb:/ipfs/QmQRq7QRF31aogbVinB84rkZm5zthwGbboTqx5d6HGaRTZ\"]}},\"version\":1}",
+    "bytecode": "",
+    "deployedBytecode": "",
+    "sourceMap": "",
+    "deployedSourceMap": "",
+    "sourcePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/IBase.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.6.1+commit.e6f7d5a4"
+    },
+    "ast": {
+        "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/IBase.sol",
+        "exportedSymbols": {
+            "ICommon": [
+                8
+            ]
+        },
+        "id": 9,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "experimental",
+                    "ABIEncoderV2"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:33:0"
+            },
+            {
+                "id": 2,
+                "literals": [
+                    "solidity",
+                    ">=",
+                    "0.4",
+                    ".22",
+                    "<=",
+                    "0.6",
+                    ".1"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "35:33:0"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "interface",
+                "documentation": null,
+                "fullyImplemented": true,
+                "id": 8,
+                "linearizedBaseContracts": [
+                    8
+                ],
+                "name": "ICommon",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "canonicalName": "ICommon.Item",
+                        "id": 7,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 4,
+                                "name": "owner",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 7,
+                                "src": "118:13:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                },
+                                "typeName": {
+                                    "id": 3,
+                                    "name": "address",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "118:7:0",
+                                    "stateMutability": "nonpayable",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 6,
+                                "name": "uri",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 7,
+                                "src": "142:10:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_string_storage_ptr",
+                                    "typeString": "string"
+                                },
+                                "typeName": {
+                                    "id": 5,
+                                    "name": "string",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "142:6:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_storage_ptr",
+                                        "typeString": "string"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "Item",
+                        "nodeType": "StructDefinition",
+                        "scope": 8,
+                        "src": "96:64:0",
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 9,
+                "src": "72:91:0"
+            }
+        ],
+        "src": "0:163:0"
+    },
+    "functionHashes": {},
+    "gasEstimates": null
+}
