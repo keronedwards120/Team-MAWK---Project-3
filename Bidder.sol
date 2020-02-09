@@ -1,9 +1,9 @@
 pragma solidity >=0.4.22 <0.6.0;
 import "./AuctionHouse.sol";
 import "./Interfaces/ISeller.sol";
-import "./Interfaces/ICommon.sol";
+import "./Interfaces/IBidder.sol";
 
-contract Ibid {
+contract Bidder is IBidder {
     address payable public beneficiary;
 
     // Current state of the auction.
@@ -83,6 +83,7 @@ contract Ibid {
     function pendingReturn(address sender) public view returns (uint) {
         return pendingReturns[sender];
     }
+
     
 
     /// End the auction and send the highest bid
