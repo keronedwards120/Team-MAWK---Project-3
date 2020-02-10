@@ -10,11 +10,11 @@ import "./Interfaces/ICommon.sol";
 
 contract MawkMarket is IIMawkMarket, ERC721Full, Ownable {
 
-struct Item{
-        address owner;
+    struct Item{
+        address payable owner;
         string uri;
         uint value;
-    }   
+    }
 
     constructor() ERC721Full("MawkMarket", "MAWK") public {}
 
@@ -66,17 +66,17 @@ struct Item{
         auction.bid.value(msg.value)(msg.sender);
     }
 
-// register seller 
-function registerSeller(address payable_benefiary) public {
+    // register seller
+    function registerSeller(address payable_benefiary) public {
         token_ids.increment();
         uint token_id = token_ids.current();
-        Seller_list[token_id] = new Seller(payable_benefiary)
-        }
-    
-// register item
-function registerItems(address payable owner,  string memory uri, uint value) public payable {
+        Seller_list[token_id] = new Seller(payable_benefiary);
+    }
+
+    // register item
+    function registerItems(address payable owner,  string memory uri, uint value) public payable {
         item_id.increment();
         uint item_id = token_ids.current();
-        items[item_id] = Item(owner, uri, value);   
+        items[item_id] = Item(owner, uri, value);
     }
 }

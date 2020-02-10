@@ -22,7 +22,7 @@
                     "gasEstimates": null,
                     "methodIdentifiers": {}
                 },
-                "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":\"ICommon\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":{\"keccak256\":\"0x03447080ce22c7272d2fdc1cd7ad15866d07c865b537e84975afa6771e4b5ec3\",\"urls\":[\"bzz-raw://547cb71f8229d0edabe4de710ce519b814d4f18c326718a0fdcd7da56b9006ac\",\"dweb:/ipfs/QmQRq7QRF31aogbVinB84rkZm5zthwGbboTqx5d6HGaRTZ\"]}},\"version\":1}",
+                "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":\"ICommon\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":{\"keccak256\":\"0x89aee7ea9079a57ace58edd88d4aa48dee7ddd88b9242eec208c11acb38ae219\",\"urls\":[\"bzz-raw://817925e0c372a653170c891fff2f29aaa8f209d976ca5537d13909554c5cfae6\",\"dweb:/ipfs/QmcRXG9tEzQFHtUxhygbYjYVNEGVq6JbqFHT3cgBGePQ7C\"]}},\"version\":1}",
                 "userdoc": {
                     "methods": {}
                 }
@@ -89,22 +89,22 @@
                                         "nodeType": "VariableDeclaration",
                                         "overrides": null,
                                         "scope": 7,
-                                        "src": "118:13:0",
+                                        "src": "118:21:0",
                                         "stateVariable": false,
                                         "storageLocation": "default",
                                         "typeDescriptions": {
-                                            "typeIdentifier": "t_address",
-                                            "typeString": "address"
+                                            "typeIdentifier": "t_address_payable",
+                                            "typeString": "address payable"
                                         },
                                         "typeName": {
                                             "id": 3,
                                             "name": "address",
                                             "nodeType": "ElementaryTypeName",
-                                            "src": "118:7:0",
-                                            "stateMutability": "nonpayable",
+                                            "src": "118:15:0",
+                                            "stateMutability": "payable",
                                             "typeDescriptions": {
-                                                "typeIdentifier": "t_address",
-                                                "typeString": "address"
+                                                "typeIdentifier": "t_address_payable",
+                                                "typeString": "address payable"
                                             }
                                         },
                                         "value": null,
@@ -117,7 +117,7 @@
                                         "nodeType": "VariableDeclaration",
                                         "overrides": null,
                                         "scope": 7,
-                                        "src": "142:10:0",
+                                        "src": "150:10:0",
                                         "stateVariable": false,
                                         "storageLocation": "default",
                                         "typeDescriptions": {
@@ -128,7 +128,7 @@
                                             "id": 5,
                                             "name": "string",
                                             "nodeType": "ElementaryTypeName",
-                                            "src": "142:6:0",
+                                            "src": "150:6:0",
                                             "typeDescriptions": {
                                                 "typeIdentifier": "t_string_storage_ptr",
                                                 "typeString": "string"
@@ -141,15 +141,15 @@
                                 "name": "Item",
                                 "nodeType": "StructDefinition",
                                 "scope": 8,
-                                "src": "96:64:0",
+                                "src": "96:72:0",
                                 "visibility": "public"
                             }
                         ],
                         "scope": 9,
-                        "src": "72:91:0"
+                        "src": "72:99:0"
                     }
                 ],
-                "src": "0:163:0"
+                "src": "0:171:0"
             },
             "id": 0
         }
