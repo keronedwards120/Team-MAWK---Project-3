@@ -18,23 +18,11 @@
                 {
                     "indexed": false,
                     "internalType": "address",
-                    "name": "owner",
+                    "name": "seller",
                     "type": "address"
-                },
-                {
-                    "indexed": false,
-                    "internalType": "string",
-                    "name": "reference_uri",
-                    "type": "string"
-                },
-                {
-                    "indexed": false,
-                    "internalType": "uint256",
-                    "name": "amount",
-                    "type": "uint256"
                 }
             ],
-            "name": "RegisterItem",
+            "name": "RegisterSeller",
             "type": "event"
         },
         {
@@ -51,11 +39,11 @@
             "type": "function"
         }
     ],
-    "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_beneficiary\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"reference_uri\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"RegisterItem\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"seller_address\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol\":\"Seller\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":{\"keccak256\":\"0x03447080ce22c7272d2fdc1cd7ad15866d07c865b537e84975afa6771e4b5ec3\",\"urls\":[\"bzz-raw://547cb71f8229d0edabe4de710ce519b814d4f18c326718a0fdcd7da56b9006ac\",\"dweb:/ipfs/QmQRq7QRF31aogbVinB84rkZm5zthwGbboTqx5d6HGaRTZ\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol\":{\"keccak256\":\"0xcf38423cb9d51d143355cfed7556e94c665ab8d04afdc972409426a7812c241f\",\"urls\":[\"bzz-raw://5c7387c3532644efc0badf9dc832fab2979d4fc2a2852e67c76de3934094cc40\",\"dweb:/ipfs/QmQHndXmR8DG9wV67RXC4VmNLLwkdQAkec21gWRKih54YC\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol\":{\"keccak256\":\"0x40162039f7cca80cc9a9815f15f863287c5f7de333716196445cfb31f5a9d820\",\"urls\":[\"bzz-raw://128a1d16051b6536c7384e38f2d593e4f5450ff060189254bb9d4b3e14d22ecb\",\"dweb:/ipfs/QmREwEVhiu8utwJeCtBYbqRXqiryh5L9JcGejdrsAEjpQN\"]}},\"version\":1}",
-    "bytecode": "608060405234801561001057600080fd5b506040516100f83803806100f88339818101604052602081101561003357600080fd5b5051600080546001600160a01b039092166001600160a01b03199092169190911790556094806100646000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806395ee3ce014602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03168156fea264697066735822122001f472346aabef3eefbb26e3a867e4d31e4510d08a64aecf2698ee284934b9ed64736f6c63430006010033",
-    "deployedBytecode": "6080604052348015600f57600080fd5b506004361060285760003560e01c806395ee3ce014602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03168156fea264697066735822122001f472346aabef3eefbb26e3a867e4d31e4510d08a64aecf2698ee284934b9ed64736f6c63430006010033",
-    "sourceMap": "109:183:2:-:0;;;194:95;8:9:-1;5:2;;;30:1;27;20:12;5:2;194:95:2;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;194:95:2;254:14;:27;;-1:-1:-1;;;;;254:27:2;;;-1:-1:-1;;;;;;254:27:2;;;;;;;;;109:183;;;;;;",
-    "deployedSourceMap": "109:183:2:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;109:183:2;;;;;;;;;;;;;;;;;;;150:37;;;:::i;:::-;;;;-1:-1:-1;;;;;150:37:2;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;150:37:2;;:::o",
+    "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_beneficiary\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"seller\",\"type\":\"address\"}],\"name\":\"RegisterSeller\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"seller_address\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol\":\"Seller\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":{\"keccak256\":\"0x1c1f9e6b0028c8ae33f50d6b61417ed6459a48bdaae97c96a6c8eac35f132f08\",\"urls\":[\"bzz-raw://9ae8787e5a09ecbb5396e1ad85ddd7c0d9306f6700960b5cf770914b4d9a93d7\",\"dweb:/ipfs/QmUrqiHQJrznCfJXu384tuJYR18jopvpHv5WFgTKYQseVu\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol\":{\"keccak256\":\"0x975a88141c5e64593572e3c66b79dc4ab5f16bbed837a55a5c237480f50178c2\",\"urls\":[\"bzz-raw://7e64e6ab65f2253e13d9d7968e427d60242c7728f151844861be6ae1168db601\",\"dweb:/ipfs/QmfGU7bP1mRWTWpbsaYwQermRUk2CubYz3w2C14EqFwEBs\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol\":{\"keccak256\":\"0x1542ece1d6f0a1e4ced4e7c0d4929311134a017f70dd0badc4511d855f10ef03\",\"urls\":[\"bzz-raw://f872e62d3eb9c36507b51dae674ebaa98dbe9066d1e52e6245ce11099bd42c40\",\"dweb:/ipfs/QmRtabdz5bivYZopuSCNJUsC7DMeBhJTBfKqYkPJAqdJfh\"]}},\"version\":1}",
+    "bytecode": "608060405234801561001057600080fd5b506040516100f83803806100f88339818101604052602081101561003357600080fd5b5051600080546001600160a01b039092166001600160a01b03199092169190911790556094806100646000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806395ee3ce014602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03168156fea26469706673582212208b795a6d29ec3b47d8adc75620a3fe42e609d4f68d4082704e65efcc74807f6164736f6c63430006010033",
+    "deployedBytecode": "6080604052348015600f57600080fd5b506004361060285760003560e01c806395ee3ce014602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03168156fea26469706673582212208b795a6d29ec3b47d8adc75620a3fe42e609d4f68d4082704e65efcc74807f6164736f6c63430006010033",
+    "sourceMap": "71:212:2:-:0;;;188:93;8:9:-1;5:2;;;30:1;27;20:12;5:2;188:93:2;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;188:93:2;247:14;:27;;-1:-1:-1;;;;;247:27:2;;;-1:-1:-1;;;;;;247:27:2;;;;;;;;;71:212;;;;;;",
+    "deployedSourceMap": "71:212:2:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;71:212:2;;;;;;;;;;;;;;;;;;;103:37;;;:::i;:::-;;;;-1:-1:-1;;;;;103:37:2;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;103:37:2;;:::o",
     "sourcePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol",
     "compiler": {
         "name": "solc",
@@ -65,14 +53,14 @@
         "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol",
         "exportedSymbols": {
             "Seller": [
-                42
+                39
             ]
         },
-        "id": 43,
+        "id": 40,
         "nodeType": "SourceUnit",
         "nodes": [
             {
-                "id": 23,
+                "id": 19,
                 "literals": [
                     "solidity",
                     ">=",
@@ -88,22 +76,11 @@
             {
                 "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol",
                 "file": "./Interfaces/ISeller.sol",
-                "id": 24,
+                "id": 20,
                 "nodeType": "ImportDirective",
-                "scope": 43,
-                "sourceUnit": 22,
-                "src": "37:34:2",
-                "symbolAliases": [],
-                "unitAlias": ""
-            },
-            {
-                "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol",
-                "file": "./Interfaces/ICommon.sol",
-                "id": 25,
-                "nodeType": "ImportDirective",
-                "scope": 43,
-                "sourceUnit": 9,
-                "src": "73:34:2",
+                "scope": 40,
+                "sourceUnit": 18,
+                "src": "35:34:2",
                 "symbolAliases": [],
                 "unitAlias": ""
             },
@@ -114,51 +91,31 @@
                         "arguments": null,
                         "baseName": {
                             "contractScope": null,
-                            "id": 26,
+                            "id": 21,
                             "name": "ISeller",
                             "nodeType": "UserDefinedTypeName",
-                            "referencedDeclaration": 21,
-                            "src": "128:7:2",
+                            "referencedDeclaration": 17,
+                            "src": "90:7:2",
                             "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ISeller_$21",
+                                "typeIdentifier": "t_contract$_ISeller_$17",
                                 "typeString": "contract ISeller"
                             }
                         },
-                        "id": 27,
+                        "id": 22,
                         "nodeType": "InheritanceSpecifier",
-                        "src": "128:7:2"
-                    },
-                    {
-                        "arguments": null,
-                        "baseName": {
-                            "contractScope": null,
-                            "id": 28,
-                            "name": "ICommon",
-                            "nodeType": "UserDefinedTypeName",
-                            "referencedDeclaration": 8,
-                            "src": "136:7:2",
-                            "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ICommon_$8",
-                                "typeString": "contract ICommon"
-                            }
-                        },
-                        "id": 29,
-                        "nodeType": "InheritanceSpecifier",
-                        "src": "136:7:2"
+                        "src": "90:7:2"
                     }
                 ],
                 "contractDependencies": [
-                    8,
-                    21
+                    17
                 ],
                 "contractKind": "contract",
                 "documentation": null,
                 "fullyImplemented": true,
-                "id": 42,
+                "id": 39,
                 "linearizedBaseContracts": [
-                    42,
-                    8,
-                    21
+                    39,
+                    17
                 ],
                 "name": "Seller",
                 "nodeType": "ContractDefinition",
@@ -166,12 +123,12 @@
                     {
                         "constant": false,
                         "functionSelector": "95ee3ce0",
-                        "id": 31,
+                        "id": 24,
                         "name": "seller_address",
                         "nodeType": "VariableDeclaration",
                         "overrides": null,
-                        "scope": 42,
-                        "src": "150:37:2",
+                        "scope": 39,
+                        "src": "103:37:2",
                         "stateVariable": true,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -179,10 +136,10 @@
                             "typeString": "address payable"
                         },
                         "typeName": {
-                            "id": 30,
+                            "id": 23,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
-                            "src": "150:15:2",
+                            "src": "103:15:2",
                             "stateMutability": "payable",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_address_payable",
@@ -193,27 +150,71 @@
                         "visibility": "public"
                     },
                     {
+                        "anonymous": false,
+                        "documentation": null,
+                        "id": 28,
+                        "name": "RegisterSeller",
+                        "nodeType": "EventDefinition",
+                        "parameters": {
+                            "id": 27,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 26,
+                                    "indexed": false,
+                                    "name": "seller",
+                                    "nodeType": "VariableDeclaration",
+                                    "overrides": null,
+                                    "scope": 28,
+                                    "src": "167:14:2",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 25,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "167:7:2",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "166:16:2"
+                        },
+                        "src": "146:37:2"
+                    },
+                    {
                         "body": {
-                            "id": 40,
+                            "id": 37,
                             "nodeType": "Block",
-                            "src": "243:46:2",
+                            "src": "237:44:2",
                             "statements": [
                                 {
                                     "expression": {
                                         "argumentTypes": null,
-                                        "id": 38,
+                                        "id": 35,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": false,
                                         "lValueRequested": false,
                                         "leftHandSide": {
                                             "argumentTypes": null,
-                                            "id": 36,
+                                            "id": 33,
                                             "name": "seller_address",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 31,
-                                            "src": "254:14:2",
+                                            "referencedDeclaration": 24,
+                                            "src": "247:14:2",
                                             "typeDescriptions": {
                                                 "typeIdentifier": "t_address_payable",
                                                 "typeString": "address payable"
@@ -223,31 +224,31 @@
                                         "operator": "=",
                                         "rightHandSide": {
                                             "argumentTypes": null,
-                                            "id": 37,
+                                            "id": 34,
                                             "name": "_beneficiary",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 33,
-                                            "src": "269:12:2",
+                                            "referencedDeclaration": 30,
+                                            "src": "262:12:2",
                                             "typeDescriptions": {
                                                 "typeIdentifier": "t_address_payable",
                                                 "typeString": "address payable"
                                             }
                                         },
-                                        "src": "254:27:2",
+                                        "src": "247:27:2",
                                         "typeDescriptions": {
                                             "typeIdentifier": "t_address_payable",
                                             "typeString": "address payable"
                                         }
                                     },
-                                    "id": 39,
+                                    "id": 36,
                                     "nodeType": "ExpressionStatement",
-                                    "src": "254:27:2"
+                                    "src": "247:27:2"
                                 }
                             ]
                         },
                         "documentation": null,
-                        "id": 41,
+                        "id": 38,
                         "implemented": true,
                         "kind": "constructor",
                         "modifiers": [],
@@ -255,17 +256,17 @@
                         "nodeType": "FunctionDefinition",
                         "overrides": null,
                         "parameters": {
-                            "id": 34,
+                            "id": 31,
                             "nodeType": "ParameterList",
                             "parameters": [
                                 {
                                     "constant": false,
-                                    "id": 33,
+                                    "id": 30,
                                     "name": "_beneficiary",
                                     "nodeType": "VariableDeclaration",
                                     "overrides": null,
-                                    "scope": 41,
-                                    "src": "206:28:2",
+                                    "scope": 38,
+                                    "src": "200:28:2",
                                     "stateVariable": false,
                                     "storageLocation": "default",
                                     "typeDescriptions": {
@@ -273,10 +274,10 @@
                                         "typeString": "address payable"
                                     },
                                     "typeName": {
-                                        "id": 32,
+                                        "id": 29,
                                         "name": "address",
                                         "nodeType": "ElementaryTypeName",
-                                        "src": "206:15:2",
+                                        "src": "200:15:2",
                                         "stateMutability": "payable",
                                         "typeDescriptions": {
                                             "typeIdentifier": "t_address_payable",
@@ -287,26 +288,26 @@
                                     "visibility": "internal"
                                 }
                             ],
-                            "src": "205:30:2"
+                            "src": "199:30:2"
                         },
                         "returnParameters": {
-                            "id": 35,
+                            "id": 32,
                             "nodeType": "ParameterList",
                             "parameters": [],
-                            "src": "243:0:2"
+                            "src": "237:0:2"
                         },
-                        "scope": 42,
-                        "src": "194:95:2",
+                        "scope": 39,
+                        "src": "188:93:2",
                         "stateMutability": "nonpayable",
                         "virtual": false,
                         "visibility": "public"
                     }
                 ],
-                "scope": 43,
-                "src": "109:183:2"
+                "scope": 40,
+                "src": "71:212:2"
             }
         ],
-        "src": "0:292:2"
+        "src": "0:283:2"
     },
     "functionHashes": {
         "seller_address()": "95ee3ce0"

@@ -1,4 +1,4 @@
-pragma solidity >=0.4.22 <0.6.1;
+pragma solidity >=0.4.22 <=0.6.1;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721Full.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/ownership/Ownable.sol";
@@ -29,16 +29,16 @@ contract MawkMarket is ERC721Full, Ownable {
         auctions[token_id] = new MawkAuction(foundation_address);
     }
 
-//Move to seller contract
-  //  function registerLand(string memory uri) public payable onlyOwner {
+    //Move to seller contract
+    /* function registerLand(string memory uri) public payable onlyOwner {
     //    token_ids.increment();
       //  uint token_id = token_ids.current();
         //_mint(foundation_address, token_id);
        // _setTokenURI(token_id, uri);
        // createAuction(token_id);
-    }
+    }*/
 
-    function endAuction(uint token_id) public (onlyOwner) landRegistered(token_id) {
+    function endAuction(uint token_id) public onlyOwner landRegistered(token_id) {
         MawkAuction auction = auctions[token_id];
         auction.auctionEnd();
         safeTransferFrom(owner(), auction.highestBidder(), token_id);
