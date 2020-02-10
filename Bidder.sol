@@ -1,6 +1,5 @@
-pragma solidity >=0.4.22 <0.6.0;
+pragma solidity >=0.4.22 <=0.6.1;
 import "./AuctionHouse.sol";
-import "./Interfaces/ISeller.sol";
 import "./Interfaces/IBidder.sol";
 
 contract Bidder is IBidder {
@@ -71,7 +70,7 @@ contract Bidder is IBidder {
             // before `send` returns.
             pendingReturns[msg.sender] = 0;
 
-            if (!msg.sender.send(amount)) {
+            if (!msg.sender.transfer(amount)) {
                 // No need to call throw here, just reset the amount owing
                 pendingReturns[msg.sender] = amount;
                 return false;
@@ -83,8 +82,6 @@ contract Bidder is IBidder {
     function pendingReturn(address sender) public view returns (uint) {
         return pendingReturns[sender];
     }
-
-    
 
     /// End the auction and send the highest bid
     /// to the beneficiary.
@@ -114,8 +111,7 @@ contract Bidder is IBidder {
         beneficiary.transfer(highestBid);
     }
         
-   /* // function revealWinners() public onlyOwner{
-
+   /*function revealWinners() public onlyOwner{
         for (uint id = 0; id < 3; id++) {
             Item storage currentItem=items[id];
             if(currentItem.itemTokens.length != 0){
@@ -124,10 +120,10 @@ contract Bidder is IBidder {
                winners[id] = bidders[winnerId].addr;           
             }
         }
-    }  */
+    } 
 
-    /* function getPersonDetails(uint id) public constant returns(uint,uint,address){
+    function getPersonDetails(uint id) public view returns(uint,uint,address) {
         return (bidders[id].remainingTokens,bidders[id].personId,bidders[id].addr);
-    }
+    }*/
 
-} */
+}
