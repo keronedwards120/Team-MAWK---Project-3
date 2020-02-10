@@ -10,15 +10,26 @@ import "./Interfaces/ICommon.sol";
 
 contract MawkMarket is IIMawkMarket, ERC721Full, Ownable {
 
+struct Item{
+        address owner;
+        string uri;
+        uint value;
+    }   
+
     constructor() ERC721Full("MawkMarket", "MAWK") public {}
 
     using Counters for Counters.Counter;
 
     Counters.Counter token_ids;
+    Counters.Counter items_ids;
+
 
     address payable foundation_address = msg.sender;
 
     mapping(uint => MawkAuction) public auctions;
+    mapping(uint => Seller) public Seller_list;
+    mapping(uint => Item) public Item_list;
+
 
     modifier landRegistered(uint token_id) {
         require(_exists(token_id), "Land not registered!");
@@ -55,4 +66,17 @@ contract MawkMarket is IIMawkMarket, ERC721Full, Ownable {
         auction.bid.value(msg.value)(msg.sender);
     }
 
+// register seller 
+function registerSeller(address payable_benefiary) public {
+        token_ids.increment();
+        uint token_id = token_ids.current();
+        Seller_list[token_id] = new Seller(payable_benefiary)
+        }
+    
+// register item
+function registerItems(address payable owner,  string memory uri, uint value) public payable {
+        item_id.increment();
+        uint item_id = token_ids.current();
+        items[item_id] = Item(owner, uri, value);   
+    }
 }
