@@ -1,7 +1,7 @@
 pragma solidity >=0.4.22 <=0.6.1;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721Full.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/ownership/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721Full.sol";
+//import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/ownership/Ownable.sol";
 import "./Bidder.sol";
 import "./Seller.sol";
 import "./Interfaces/ISeller.sol";
