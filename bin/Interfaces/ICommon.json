@@ -1,7 +1,7 @@
 {
     "contractName": "ICommon",
     "abi": [],
-    "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":\"ICommon\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":{\"keccak256\":\"0x89aee7ea9079a57ace58edd88d4aa48dee7ddd88b9242eec208c11acb38ae219\",\"urls\":[\"bzz-raw://817925e0c372a653170c891fff2f29aaa8f209d976ca5537d13909554c5cfae6\",\"dweb:/ipfs/QmcRXG9tEzQFHtUxhygbYjYVNEGVq6JbqFHT3cgBGePQ7C\"]}},\"version\":1}",
+    "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":\"ICommon\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":{\"keccak256\":\"0x8f70410f919798e1fbd8bf46a4ec1dcd554c90fc2a3da9d85709e3f1706d9ed0\",\"urls\":[\"bzz-raw://3b7d5993b741f6727314c9037111bd0fcce63ecc351cfe39bc78be118a41c5f3\",\"dweb:/ipfs/QmVuHfinPssyUKYMWgVsMrcMJksVAAezGZkGuo4BZovPx4\"]}},\"version\":1}",
     "bytecode": "",
     "deployedBytecode": "",
     "sourceMap": "",
@@ -15,10 +15,10 @@
         "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol",
         "exportedSymbols": {
             "ICommon": [
-                8
+                10
             ]
         },
-        "id": 9,
+        "id": 11,
         "nodeType": "SourceUnit",
         "nodes": [
             {
@@ -51,16 +51,16 @@
                 "contractKind": "interface",
                 "documentation": null,
                 "fullyImplemented": true,
-                "id": 8,
+                "id": 10,
                 "linearizedBaseContracts": [
-                    8
+                    10
                 ],
                 "name": "ICommon",
                 "nodeType": "ContractDefinition",
                 "nodes": [
                     {
                         "canonicalName": "ICommon.Item",
-                        "id": 7,
+                        "id": 9,
                         "members": [
                             {
                                 "constant": false,
@@ -68,7 +68,7 @@
                                 "name": "owner",
                                 "nodeType": "VariableDeclaration",
                                 "overrides": null,
-                                "scope": 7,
+                                "scope": 9,
                                 "src": "118:21:0",
                                 "stateVariable": false,
                                 "storageLocation": "default",
@@ -96,7 +96,7 @@
                                 "name": "uri",
                                 "nodeType": "VariableDeclaration",
                                 "overrides": null,
-                                "scope": 7,
+                                "scope": 9,
                                 "src": "150:10:0",
                                 "stateVariable": false,
                                 "storageLocation": "default",
@@ -116,20 +116,47 @@
                                 },
                                 "value": null,
                                 "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 8,
+                                "name": "value",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 9,
+                                "src": "171:10:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 7,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "171:4:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "internal"
                             }
                         ],
                         "name": "Item",
                         "nodeType": "StructDefinition",
-                        "scope": 8,
-                        "src": "96:72:0",
+                        "scope": 10,
+                        "src": "96:93:0",
                         "visibility": "public"
                     }
                 ],
-                "scope": 9,
-                "src": "72:99:0"
+                "scope": 11,
+                "src": "72:120:0"
             }
         ],
-        "src": "0:171:0"
+        "src": "0:192:0"
     },
     "functionHashes": {},
     "gasEstimates": null

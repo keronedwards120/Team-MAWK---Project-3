@@ -1,10 +1,10 @@
 pragma solidity >=0.4.22 <=0.6.1;
 import "./AuctionHouse.sol";
-import "./Interfaces/IBidder.sol";
+import "./IBidder.sol";
 
 contract Bidder is IBidder {
     address payable public beneficiary;
-
+    bool public isExist;
     // Current state of the auction.
     address public highestBidder;
     uint public highestBid;
@@ -32,6 +32,7 @@ contract Bidder is IBidder {
         address payable _beneficiary
     ) public {
         beneficiary = _beneficiary;
+        isExist = true;
     }
 
     /// Bid on the auction with the value sent
@@ -110,20 +111,6 @@ contract Bidder is IBidder {
         // 3. Interaction
         beneficiary.transfer(highestBid);
     }
-        
-   /*function revealWinners() public onlyOwner{
-        for (uint id = 0; id < 3; id++) {
-            Item storage currentItem=items[id];
-            if(currentItem.itemTokens.length != 0){
-              uint randomIndex = (block.number / currentItem.itemTokens.length)% currentItem.itemTokens.length; 
-              uint winnerId = currentItem.itemTokens[randomIndex];
-               winners[id] = bidders[winnerId].addr;           
-            }
-        }
-    } 
 
-    function getPersonDetails(uint id) public view returns(uint,uint,address) {
-        return (bidders[id].remainingTokens,bidders[id].personId,bidders[id].addr);
-    }*/
 
 }

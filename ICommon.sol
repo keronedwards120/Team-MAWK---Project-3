@@ -5,5 +5,6 @@ interface ICommon{
     struct Item{
         address payable owner;
         string uri;
+        uint value;
     }
 }

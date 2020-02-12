@@ -4,35 +4,31 @@ import "./OpenZeppelin/contracts/token/ERC721/ERC721Full.sol";
 import "./OpenZeppelin/contracts/ownership/Ownable.sol";
 import "./Bidder.sol";
 import "./Seller.sol";
-import "./Interfaces/IMawkMarket.sol";
-import "./Interfaces/ISeller.sol";
-import "./Interfaces/ICommon.sol";
+import "./IMawkMarket.sol";
+import "./ISeller.sol";
+import "./ICommon.sol";
 
-contract MawkMarket is IIMawkMarket, ERC721Full, Ownable {
-
-    struct Item{
-        address payable owner;
-        string uri;
-        uint value;
-    }
-
+contract MawkMarket is IMawkMarket,ICommon {
     constructor() ERC721Full("MawkMarket", "MAWK") public {}
-
     using Counters for Counters.Counter;
 
     Counters.Counter token_ids;
     Counters.Counter items_ids;
-
-
     address payable foundation_address = msg.sender;
 
-    mapping(uint => MawkAuction) public auctions;
-    mapping(uint => Seller) public Seller_list;
-    mapping(uint => Item) public Item_list;
+    //mapping(uint => MawkAuction) public auctions;
+    mapping(address => Seller) public seller_list;
+    mapping(uint => Item) public item_list;
+    mapping(address => Bidder) public bidder_list;
 
 
-    modifier landRegistered(uint token_id) {
-        require(_exists(token_id), "Land not registered!");
+    modifier sellerRegistered(address payable _address) {
+        require(seller_list[_address].isExit, "Seller not registered!");
+        _;
+    }
+
+    modifier bidderRegistered(address payable _address) {
+        require(bidder_list[_address].isExit, "Bidder not registered!");
         _;
     }
 
@@ -67,7 +63,7 @@ contract MawkMarket is IIMawkMarket, ERC721Full, Ownable {
     }
 
     // register seller
-    function registerSeller(address payable_benefiary) public {
+    function registerSeller(address payable_benefiary) public sellerRegistered(payable_benefiary) {
         token_ids.increment();
         uint token_id = token_ids.current();
         Seller_list[token_id] = new Seller(payable_benefiary);

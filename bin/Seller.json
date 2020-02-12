@@ -27,6 +27,19 @@
         },
         {
             "inputs": [],
+            "name": "isExist",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
             "name": "seller_address",
             "outputs": [
                 {
@@ -39,11 +52,11 @@
             "type": "function"
         }
     ],
-    "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_beneficiary\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"seller\",\"type\":\"address\"}],\"name\":\"RegisterSeller\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"seller_address\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol\":\"Seller\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":{\"keccak256\":\"0x1c1f9e6b0028c8ae33f50d6b61417ed6459a48bdaae97c96a6c8eac35f132f08\",\"urls\":[\"bzz-raw://9ae8787e5a09ecbb5396e1ad85ddd7c0d9306f6700960b5cf770914b4d9a93d7\",\"dweb:/ipfs/QmUrqiHQJrznCfJXu384tuJYR18jopvpHv5WFgTKYQseVu\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol\":{\"keccak256\":\"0x975a88141c5e64593572e3c66b79dc4ab5f16bbed837a55a5c237480f50178c2\",\"urls\":[\"bzz-raw://7e64e6ab65f2253e13d9d7968e427d60242c7728f151844861be6ae1168db601\",\"dweb:/ipfs/QmfGU7bP1mRWTWpbsaYwQermRUk2CubYz3w2C14EqFwEBs\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol\":{\"keccak256\":\"0x1542ece1d6f0a1e4ced4e7c0d4929311134a017f70dd0badc4511d855f10ef03\",\"urls\":[\"bzz-raw://f872e62d3eb9c36507b51dae674ebaa98dbe9066d1e52e6245ce11099bd42c40\",\"dweb:/ipfs/QmRtabdz5bivYZopuSCNJUsC7DMeBhJTBfKqYkPJAqdJfh\"]}},\"version\":1}",
-    "bytecode": "608060405234801561001057600080fd5b506040516100f83803806100f88339818101604052602081101561003357600080fd5b5051600080546001600160a01b039092166001600160a01b03199092169190911790556094806100646000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806395ee3ce014602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03168156fea26469706673582212208b795a6d29ec3b47d8adc75620a3fe42e609d4f68d4082704e65efcc74807f6164736f6c63430006010033",
-    "deployedBytecode": "6080604052348015600f57600080fd5b506004361060285760003560e01c806395ee3ce014602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03168156fea26469706673582212208b795a6d29ec3b47d8adc75620a3fe42e609d4f68d4082704e65efcc74807f6164736f6c63430006010033",
-    "sourceMap": "71:212:2:-:0;;;188:93;8:9:-1;5:2;;;30:1;27;20:12;5:2;188:93:2;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;188:93:2;247:14;:27;;-1:-1:-1;;;;;247:27:2;;;-1:-1:-1;;;;;;247:27:2;;;;;;;;;71:212;;;;;;",
-    "deployedSourceMap": "71:212:2:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;71:212:2;;;;;;;;;;;;;;;;;;;103:37;;;:::i;:::-;;;;-1:-1:-1;;;;;103:37:2;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;103:37:2;;:::o",
+    "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_beneficiary\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"seller\",\"type\":\"address\"}],\"name\":\"RegisterSeller\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"isExist\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"seller_address\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol\":\"Seller\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ICommon.sol\":{\"keccak256\":\"0x8f70410f919798e1fbd8bf46a4ec1dcd554c90fc2a3da9d85709e3f1706d9ed0\",\"urls\":[\"bzz-raw://3b7d5993b741f6727314c9037111bd0fcce63ecc351cfe39bc78be118a41c5f3\",\"dweb:/ipfs/QmVuHfinPssyUKYMWgVsMrcMJksVAAezGZkGuo4BZovPx4\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol\":{\"keccak256\":\"0x975a88141c5e64593572e3c66b79dc4ab5f16bbed837a55a5c237480f50178c2\",\"urls\":[\"bzz-raw://7e64e6ab65f2253e13d9d7968e427d60242c7728f151844861be6ae1168db601\",\"dweb:/ipfs/QmfGU7bP1mRWTWpbsaYwQermRUk2CubYz3w2C14EqFwEBs\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol\":{\"keccak256\":\"0x23ceffe5414b957f235a578f433ae3840957ec8f8c989136f29f952de6c92070\",\"urls\":[\"bzz-raw://930546ed0361a3a03a3ffbd01702c2adfbb501a741e748b9ca1ba168459d82c7\",\"dweb:/ipfs/QmYSQ8XvrwYYgqNEqotcPkYwTtGPfmtNr623sZjKYucSr3\"]}},\"version\":1}",
+    "bytecode": "608060405234801561001057600080fd5b506040516101393803806101398339818101604052602081101561003357600080fd5b50516000805460ff60a01b196001600160a01b039093166001600160a01b03199091161791909116600160a01b17905560c8806100716000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c8063475502be14603757806395ee3ce0146051575b600080fd5b603d6073565b604080519115158252519081900360200190f35b60576083565b604080516001600160a01b039092168252519081900360200190f35b600054600160a01b900460ff1681565b6000546001600160a01b03168156fea26469706673582212208086e6b1bcc8a948422deeae2eb6694899cbdf71ca33639d45aef822558f0bfa64736f6c63430006010033",
+    "deployedBytecode": "6080604052348015600f57600080fd5b506004361060325760003560e01c8063475502be14603757806395ee3ce0146051575b600080fd5b603d6073565b604080519115158252519081900360200190f35b60576083565b604080516001600160a01b039092168252519081900360200190f35b600054600160a01b900460ff1681565b6000546001600160a01b03168156fea26469706673582212208086e6b1bcc8a948422deeae2eb6694899cbdf71ca33639d45aef822558f0bfa64736f6c63430006010033",
+    "sourceMap": "71:263:2:-:0;;;213:119;8:9:-1;5:2;;;30:1;27;20:12;5:2;213:119:2;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;213:119:2;272:14;:29;;-1:-1:-1;;;;;;;;;272:29:2;;;-1:-1:-1;;;;;;272:29:2;;;;311:14;;;;-1:-1:-1;;;311:14:2;;;71:263;;;;;;",
+    "deployedSourceMap": "71:263:2:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;71:263:2;;;;;;;;;;;;;;;;;;;;;;;;146:19;;;:::i;:::-;;;;;;;;;;;;;;;;;;103:37;;;:::i;:::-;;;;-1:-1:-1;;;;;103:37:2;;;;;;;;;;;;;;146:19;;;-1:-1:-1;;;146:19:2;;;;;:::o;103:37::-;;;-1:-1:-1;;;;;103:37:2;;:::o",
     "sourcePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol",
     "compiler": {
         "name": "solc",
@@ -53,14 +66,14 @@
         "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Seller.sol",
         "exportedSymbols": {
             "Seller": [
-                39
+                47
             ]
         },
-        "id": 40,
+        "id": 48,
         "nodeType": "SourceUnit",
         "nodes": [
             {
-                "id": 19,
+                "id": 21,
                 "literals": [
                     "solidity",
                     ">=",
@@ -76,10 +89,10 @@
             {
                 "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/Interfaces/ISeller.sol",
                 "file": "./Interfaces/ISeller.sol",
-                "id": 20,
+                "id": 22,
                 "nodeType": "ImportDirective",
-                "scope": 40,
-                "sourceUnit": 18,
+                "scope": 48,
+                "sourceUnit": 20,
                 "src": "35:34:2",
                 "symbolAliases": [],
                 "unitAlias": ""
@@ -91,31 +104,31 @@
                         "arguments": null,
                         "baseName": {
                             "contractScope": null,
-                            "id": 21,
+                            "id": 23,
                             "name": "ISeller",
                             "nodeType": "UserDefinedTypeName",
-                            "referencedDeclaration": 17,
+                            "referencedDeclaration": 19,
                             "src": "90:7:2",
                             "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ISeller_$17",
+                                "typeIdentifier": "t_contract$_ISeller_$19",
                                 "typeString": "contract ISeller"
                             }
                         },
-                        "id": 22,
+                        "id": 24,
                         "nodeType": "InheritanceSpecifier",
                         "src": "90:7:2"
                     }
                 ],
                 "contractDependencies": [
-                    17
+                    19
                 ],
                 "contractKind": "contract",
                 "documentation": null,
                 "fullyImplemented": true,
-                "id": 39,
+                "id": 47,
                 "linearizedBaseContracts": [
-                    39,
-                    17
+                    47,
+                    19
                 ],
                 "name": "Seller",
                 "nodeType": "ContractDefinition",
@@ -123,11 +136,11 @@
                     {
                         "constant": false,
                         "functionSelector": "95ee3ce0",
-                        "id": 24,
+                        "id": 26,
                         "name": "seller_address",
                         "nodeType": "VariableDeclaration",
                         "overrides": null,
-                        "scope": 39,
+                        "scope": 47,
                         "src": "103:37:2",
                         "stateVariable": true,
                         "storageLocation": "default",
@@ -136,7 +149,7 @@
                             "typeString": "address payable"
                         },
                         "typeName": {
-                            "id": 23,
+                            "id": 25,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "103:15:2",
@@ -150,24 +163,52 @@
                         "visibility": "public"
                     },
                     {
+                        "constant": false,
+                        "functionSelector": "475502be",
+                        "id": 28,
+                        "name": "isExist",
+                        "nodeType": "VariableDeclaration",
+                        "overrides": null,
+                        "scope": 47,
+                        "src": "146:19:2",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                        },
+                        "typeName": {
+                            "id": 27,
+                            "name": "bool",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "146:4:2",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                            }
+                        },
+                        "value": null,
+                        "visibility": "public"
+                    },
+                    {
                         "anonymous": false,
                         "documentation": null,
-                        "id": 28,
+                        "id": 32,
                         "name": "RegisterSeller",
                         "nodeType": "EventDefinition",
                         "parameters": {
-                            "id": 27,
+                            "id": 31,
                             "nodeType": "ParameterList",
                             "parameters": [
                                 {
                                     "constant": false,
-                                    "id": 26,
+                                    "id": 30,
                                     "indexed": false,
                                     "name": "seller",
                                     "nodeType": "VariableDeclaration",
                                     "overrides": null,
-                                    "scope": 28,
-                                    "src": "167:14:2",
+                                    "scope": 32,
+                                    "src": "192:14:2",
                                     "stateVariable": false,
                                     "storageLocation": "default",
                                     "typeDescriptions": {
@@ -175,10 +216,10 @@
                                         "typeString": "address"
                                     },
                                     "typeName": {
-                                        "id": 25,
+                                        "id": 29,
                                         "name": "address",
                                         "nodeType": "ElementaryTypeName",
-                                        "src": "167:7:2",
+                                        "src": "192:7:2",
                                         "stateMutability": "nonpayable",
                                         "typeDescriptions": {
                                             "typeIdentifier": "t_address",
@@ -189,32 +230,32 @@
                                     "visibility": "internal"
                                 }
                             ],
-                            "src": "166:16:2"
+                            "src": "191:16:2"
                         },
-                        "src": "146:37:2"
+                        "src": "171:37:2"
                     },
                     {
                         "body": {
-                            "id": 37,
+                            "id": 45,
                             "nodeType": "Block",
-                            "src": "237:44:2",
+                            "src": "262:70:2",
                             "statements": [
                                 {
                                     "expression": {
                                         "argumentTypes": null,
-                                        "id": 35,
+                                        "id": 39,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": false,
                                         "lValueRequested": false,
                                         "leftHandSide": {
                                             "argumentTypes": null,
-                                            "id": 33,
+                                            "id": 37,
                                             "name": "seller_address",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 24,
-                                            "src": "247:14:2",
+                                            "referencedDeclaration": 26,
+                                            "src": "272:14:2",
                                             "typeDescriptions": {
                                                 "typeIdentifier": "t_address_payable",
                                                 "typeString": "address payable"
@@ -224,31 +265,82 @@
                                         "operator": "=",
                                         "rightHandSide": {
                                             "argumentTypes": null,
-                                            "id": 34,
+                                            "id": 38,
                                             "name": "_beneficiary",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 30,
-                                            "src": "262:12:2",
+                                            "referencedDeclaration": 34,
+                                            "src": "289:12:2",
                                             "typeDescriptions": {
                                                 "typeIdentifier": "t_address_payable",
                                                 "typeString": "address payable"
                                             }
                                         },
-                                        "src": "247:27:2",
+                                        "src": "272:29:2",
                                         "typeDescriptions": {
                                             "typeIdentifier": "t_address_payable",
                                             "typeString": "address payable"
                                         }
                                     },
-                                    "id": 36,
+                                    "id": 40,
                                     "nodeType": "ExpressionStatement",
-                                    "src": "247:27:2"
+                                    "src": "272:29:2"
+                                },
+                                {
+                                    "expression": {
+                                        "argumentTypes": null,
+                                        "id": 43,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "argumentTypes": null,
+                                            "id": 41,
+                                            "name": "isExist",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 28,
+                                            "src": "311:7:2",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bool",
+                                                "typeString": "bool"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "argumentTypes": null,
+                                            "hexValue": "74727565",
+                                            "id": 42,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "bool",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "321:4:2",
+                                            "subdenomination": null,
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bool",
+                                                "typeString": "bool"
+                                            },
+                                            "value": "true"
+                                        },
+                                        "src": "311:14:2",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "id": 44,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "311:14:2"
                                 }
                             ]
                         },
                         "documentation": null,
-                        "id": 38,
+                        "id": 46,
                         "implemented": true,
                         "kind": "constructor",
                         "modifiers": [],
@@ -256,17 +348,17 @@
                         "nodeType": "FunctionDefinition",
                         "overrides": null,
                         "parameters": {
-                            "id": 31,
+                            "id": 35,
                             "nodeType": "ParameterList",
                             "parameters": [
                                 {
                                     "constant": false,
-                                    "id": 30,
+                                    "id": 34,
                                     "name": "_beneficiary",
                                     "nodeType": "VariableDeclaration",
                                     "overrides": null,
-                                    "scope": 38,
-                                    "src": "200:28:2",
+                                    "scope": 46,
+                                    "src": "225:28:2",
                                     "stateVariable": false,
                                     "storageLocation": "default",
                                     "typeDescriptions": {
@@ -274,10 +366,10 @@
                                         "typeString": "address payable"
                                     },
                                     "typeName": {
-                                        "id": 29,
+                                        "id": 33,
                                         "name": "address",
                                         "nodeType": "ElementaryTypeName",
-                                        "src": "200:15:2",
+                                        "src": "225:15:2",
                                         "stateMutability": "payable",
                                         "typeDescriptions": {
                                             "typeIdentifier": "t_address_payable",
@@ -288,38 +380,40 @@
                                     "visibility": "internal"
                                 }
                             ],
-                            "src": "199:30:2"
+                            "src": "224:30:2"
                         },
                         "returnParameters": {
-                            "id": 32,
+                            "id": 36,
                             "nodeType": "ParameterList",
                             "parameters": [],
-                            "src": "237:0:2"
+                            "src": "262:0:2"
                         },
-                        "scope": 39,
-                        "src": "188:93:2",
+                        "scope": 47,
+                        "src": "213:119:2",
                         "stateMutability": "nonpayable",
                         "virtual": false,
                         "visibility": "public"
                     }
                 ],
-                "scope": 40,
-                "src": "71:212:2"
+                "scope": 48,
+                "src": "71:263:2"
             }
         ],
-        "src": "0:283:2"
+        "src": "0:334:2"
     },
     "functionHashes": {
+        "isExist()": "475502be",
         "seller_address()": "95ee3ce0"
     },
     "gasEstimates": {
         "creation": {
-            "codeDepositCost": "29600",
+            "codeDepositCost": "40000",
             "executionCost": "infinite",
             "totalCost": "infinite"
         },
         "external": {
-            "seller_address()": "1015"
+            "isExist()": "1005",
+            "seller_address()": "1037"
         }
     }
 }
