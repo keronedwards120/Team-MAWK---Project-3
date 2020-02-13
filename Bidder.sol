@@ -2,7 +2,7 @@ pragma solidity >=0.5.0;
 
 import "./IBidder.sol";
 
-contract Bidder is IBidder {
+contract Bidder {
     address payable public beneficiary;
     bool public isExist;
     // Current state of the auction.
@@ -16,7 +16,7 @@ contract Bidder is IBidder {
     // By default initialized to `false`.
     bool public ended;
 
-    // Events that will be emitted on changes.
+    // Events that will be emitted on changes
     event HighestBidIncreased(address bidder, uint amount);
     event AuctionEnded(address winner, uint amount);
 
@@ -71,7 +71,7 @@ contract Bidder is IBidder {
             // before `send` returns.
             pendingReturns[msg.sender] = 0;
 
-            if (!msg.sender.transfer(amount)) {
+            if (!msg.sender.send(amount)) {
                 // No need to call throw here, just reset the amount owing
                 pendingReturns[msg.sender] = amount;
                 return false;

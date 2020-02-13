@@ -63,12 +63,12 @@ contract MawkMarket is IMawkMarket,ICommon {
     }
 
     // register seller
-    function registerSeller(address payable _benefiary) public sellerRegistered(payable _benefiary) {
-        seller_list[_benefiary] = new Seller(payable _benefiary);
+    function registerSeller(address payable _beneficiary) internal sellerRegistered(payable _beneficiary) {
+        seller_lis _beneficiary] = new Seller(payable _beneficiary);
     }
 
-    function registerBidder(address payable _benefiary ) public bidderRegistered(_benefiary) {
-        bidder_list[_benefiary]=new Bidder(_benefiary);
+    function registerBidder(address payable _beneficiary ) internal bidderRegistered(payable _beneficiary) {
+        bidder_lis _beneficiary]=new Bidder(payable _beneficiary);
     }
 
     // register item
