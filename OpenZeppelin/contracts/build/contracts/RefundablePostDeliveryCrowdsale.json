@@ -1,7 +1,7 @@
 {
   "fileName": "RefundablePostDeliveryCrowdsale.sol",
   "contractName": "RefundablePostDeliveryCrowdsale",
-  "source": "pragma solidity ^0.5.0;\n\nimport \"./RefundableCrowdsale.sol\";\nimport \"./PostDeliveryCrowdsale.sol\";\n\n\n/**\n * @title RefundablePostDeliveryCrowdsale\n * @dev Extension of RefundableCrowdsale contract that only delivers the tokens\n * once the crowdsale has closed and the goal met, preventing refunds to be issued\n * to token holders.\n */\ncontract RefundablePostDeliveryCrowdsale is RefundableCrowdsale, PostDeliveryCrowdsale {\n    function withdrawTokens(address beneficiary) public {\n        require(finalized(), \"RefundablePostDeliveryCrowdsale: not finalized\");\n        require(goalReached(), \"RefundablePostDeliveryCrowdsale: goal not reached\");\n\n        super.withdrawTokens(beneficiary);\n    }\n}\n",
+  "source": "pragma solidity >=0.5.0;\n\nimport \"./RefundableCrowdsale.sol\";\nimport \"./PostDeliveryCrowdsale.sol\";\n\n\n/**\n * @title RefundablePostDeliveryCrowdsale\n * @dev Extension of RefundableCrowdsale contract that only delivers the tokens\n * once the crowdsale has closed and the goal met, preventing refunds to be issued\n * to token holders.\n */\ncontract RefundablePostDeliveryCrowdsale is RefundableCrowdsale, PostDeliveryCrowdsale {\n    function withdrawTokens(address beneficiary) public {\n        require(finalized(), \"RefundablePostDeliveryCrowdsale: not finalized\");\n        require(goalReached(), \"RefundablePostDeliveryCrowdsale: goal not reached\");\n\n        super.withdrawTokens(beneficiary);\n    }\n}\n",
   "sourcePath": "contracts/crowdsale/distribution/RefundablePostDeliveryCrowdsale.sol",
   "sourceMap": "",
   "deployedSourceMap": "",
