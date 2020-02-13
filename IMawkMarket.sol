@@ -1,5 +1,5 @@
 pragma experimental ABIEncoderV2;
-pragma solidity >=0.4.22 <=0.6.1;
+pragma solidity >=0.5.0;
 
 interface IMawkMarket{
     function createAuction(uint token_id) external;

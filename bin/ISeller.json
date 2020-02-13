@@ -1,0 +1,136 @@
+{
+    "contractName": "ISeller",
+    "abi": [
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "seller",
+                    "type": "address"
+                }
+            ],
+            "name": "RegisterSeller",
+            "type": "event"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"seller\",\"type\":\"address\"}],\"name\":\"RegisterSeller\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/ISeller.sol\":\"ISeller\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/ICommon.sol\":{\"keccak256\":\"0xb5a90ba588024d155b5a6b6447569dc209e5deb09e67fa419934d62d9a49d13c\",\"urls\":[\"bzz-raw://71513d45b7d725019d0d87740d68048a96486addd6858ae9f33c3153767a0a0f\",\"dweb:/ipfs/Qme3u1X5ze65WhetunqExT2rU1oEFK19gJvXgDS1g2itEP\"]},\"c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/ISeller.sol\":{\"keccak256\":\"0xa4c9e748bb324eafa4504e3e9a662d250250f252cfc8f565df629e8b5aacb1d9\",\"urls\":[\"bzz-raw://c60399b7907ace23f48653b1e47af4d6134e90d6ae72689a324b2747082150c1\",\"dweb:/ipfs/QmbURbb8cH9JHnQtZYiy9TKGyjeTTLoqoko7VdMbpSKAiX\"]}},\"version\":1}",
+    "bytecode": "",
+    "deployedBytecode": "",
+    "sourceMap": "",
+    "deployedSourceMap": "",
+    "sourcePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/ISeller.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.6.2+commit.bacdbe57"
+    },
+    "ast": {
+        "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/ISeller.sol",
+        "exportedSymbols": {
+            "ISeller": [
+                19
+            ]
+        },
+        "id": 20,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 12,
+                "literals": [
+                    "experimental",
+                    "ABIEncoderV2"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:33:1"
+            },
+            {
+                "id": 13,
+                "literals": [
+                    "solidity",
+                    ">=",
+                    "0.5",
+                    ".0"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "35:24:1"
+            },
+            {
+                "absolutePath": "c:/Users/Manpreet/OneDrive/Columbia University FinTech/Team-MAWK---Project-3/ICommon.sol",
+                "file": "./ICommon.sol",
+                "id": 14,
+                "nodeType": "ImportDirective",
+                "scope": 20,
+                "sourceUnit": 11,
+                "src": "63:23:1",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "interface",
+                "documentation": null,
+                "fullyImplemented": true,
+                "id": 19,
+                "linearizedBaseContracts": [
+                    19
+                ],
+                "name": "ISeller",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "anonymous": false,
+                        "documentation": null,
+                        "id": 18,
+                        "name": "RegisterSeller",
+                        "nodeType": "EventDefinition",
+                        "parameters": {
+                            "id": 17,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 16,
+                                    "indexed": false,
+                                    "name": "seller",
+                                    "nodeType": "VariableDeclaration",
+                                    "overrides": null,
+                                    "scope": 18,
+                                    "src": "136:14:1",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 15,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "136:7:1",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "135:16:1"
+                        },
+                        "src": "115:37:1"
+                    }
+                ],
+                "scope": 20,
+                "src": "90:65:1"
+            }
+        ],
+        "src": "0:157:1"
+    },
+    "functionHashes": {},
+    "gasEstimates": null
+}

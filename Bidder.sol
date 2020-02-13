@@ -1,5 +1,5 @@
-pragma solidity >=0.4.22 <=0.6.1;
-import "./AuctionHouse.sol";
+pragma solidity >=0.5.0;
+
 import "./IBidder.sol";
 
 contract Bidder is IBidder {

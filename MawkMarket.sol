@@ -1,4 +1,4 @@
-pragma solidity >=0.4.22 <=0.6.1;
+pragma solidity >=0.5.0;
 
 import "./OpenZeppelin/contracts/token/ERC721/ERC721Full.sol";
 import "./OpenZeppelin/contracts/ownership/Ownable.sol";
@@ -63,10 +63,12 @@ contract MawkMarket is IMawkMarket,ICommon {
     }
 
     // register seller
-    function registerSeller(address payable_benefiary) public sellerRegistered(payable_benefiary) {
-        token_ids.increment();
-        uint token_id = token_ids.current();
-        Seller_list[token_id] = new Seller(payable_benefiary);
+    function registerSeller(address payable _benefiary) public sellerRegistered(payable _benefiary) {
+        seller_list[_benefiary] = new Seller(payable _benefiary);
+    }
+
+    function registerBidder(address payable _benefiary ) public bidderRegistered(_benefiary) {
+        bidder_list[_benefiary]=new Bidder(_benefiary);
     }
 
     // register item
