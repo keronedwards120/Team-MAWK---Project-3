@@ -68,7 +68,7 @@ contract MawkMarket is IMawkMarket,ICommon {
     }
 
     function registerBidder(address payable _beneficiary ) internal bidderRegistered(payable _beneficiary) {
-        bidder_lis _beneficiary]=new Bidde _beneficiary);
+        bidder_lis _beneficiary]=new Bidder(payable _beneficiary);
     }
 
     // register item
