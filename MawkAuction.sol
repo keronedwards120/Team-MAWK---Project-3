@@ -2,7 +2,7 @@ pragma solidity >=0.5.0;
 
 import "./IBidder.sol";
 
-contract Bidder {
+contract MawkAuction is IBidder {
     address payable public beneficiary;
     bool public isExist;
     // Current state of the auction.
@@ -62,7 +62,7 @@ contract Bidder {
         emit HighestBidIncreased(sender, msg.value);
     }
 
-    /// Withdraw a bid that was overbid.
+  /// Withdraw a bid that was overbid.
     function withdraw() public returns (bool) {
         uint amount = pendingReturns[msg.sender];
         if (amount > 0) {
@@ -80,7 +80,8 @@ contract Bidder {
         return true;
     }
 
-    function pendingReturn(address sender) public view returns (uint) {
+
+   function pendingReturn(address sender) public view returns (uint) {
         return pendingReturns[sender];
     }
 
