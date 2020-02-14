@@ -20,6 +20,7 @@ contract MawkMarket is IBidder,ICommon,ERC721Full,Ownable {
     mapping(address => Seller) public seller_list;
     mapping(uint => Item) public item_list;
     
+    event Verify(uint item_id, string memory uri);
 
 
     modifier sellerRegistered(address payable _address) {
@@ -32,8 +33,8 @@ contract MawkMarket is IBidder,ICommon,ERC721Full,Ownable {
         _;
     }
 
-    function createAuction(uint token_id) public onlyOwner {
-        auctions[token_id] = new MawkAuction(msg.sender);
+    function createAuction(uint token_id, address payable seller) public {
+        auctions[token_id] = new MawkAuction(seller);
     }
 
     function endAuction(uint token_id) public onlyOwner itemRegistered(token_id) {
@@ -63,20 +64,28 @@ contract MawkMarket is IBidder,ICommon,ERC721Full,Ownable {
     }
 
     // register seller
-    function registerSeller(address payable _beneficiary) internal sellerRegistered(_beneficiary) {
-        seller_list [_beneficiary] = new Seller(_beneficiary);
-    }
+    // function registerSeller(address payable _beneficiary) internal sellerRegistered(_beneficiary) {
+    //     seller_list [_beneficiary] = new Seller(_beneficiary);
+    // }
 
     // function registerBidder(address payable _beneficiary ) internal bidderRegistered(payable _beneficiary) {
     //     bidder_lis _beneficiary]=new Bidder(payable _beneficiary);
     // }
+    function verify (item_id, uri) public onlyOwner {
+        emit Verify(item_id, uri);
+    }
+    
+
 
 // Function register Items
     function registerItems(string memory uri, uint value) public payable {
-        registerSeller(msg.sender);
+        //registerSeller(msg.sender);
         item_ids.increment();
         uint item_id = item_ids.current();
         item_list[item_id] = Item(msg.sender, uri, value);
-        createAuction(item_id);
+        //_mint(msg.sender, item_id);
+        _setTokenURI(item_id, uri);
+        createAuction(item_id, msg.sender);
+      
     }
 }
