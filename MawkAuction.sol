@@ -1,10 +1,16 @@
-pragma solidity >=0.5.0;
+pragma solidity >=0.4.22 <0.6.0;
 
 import "./IBidder.sol";
 
 contract MawkAuction is IBidder {
+     // Parameters of the auction. Times are either
+    // absolute unix timestamps (seconds since 1970-01-01)
+    // or time periods in seconds.
     address payable public beneficiary;
     bool public isExist;
+    uint public auctionEnd;
+
+
     // Current state of the auction.
     address public highestBidder;
     uint public highestBid;
@@ -29,10 +35,12 @@ contract MawkAuction is IBidder {
     /// seconds bidding time on behalf of the
     /// beneficiary address `_beneficiary`.
     constructor(
+        uint _biddingTime,
         address payable _beneficiary
     ) public {
         beneficiary = _beneficiary;
         isExist = true;
+        aunctionEnd = now + _biddingTime;
     }
 
     /// Bid on the auction with the value sent
@@ -40,14 +48,21 @@ contract MawkAuction is IBidder {
     /// The value will only be refunded if the
     /// auction is not won.
     function bid(address payable sender) public payable {
-        // If the bid is not higher, send the
+        / No arguments are necessary, all
+        // information is already part of
+        // the transaction. The keyword payable
+        // is required for the function to
+        // be able to receive Ether.
+
+        // Revert the call if the bidding
+        // period is over
+        require(!ended, "auctionEnd has already been called.");
+        // money back.
         // money back.
         require(
             msg.value > highestBid,
             "There already is a higher bid."
         );
-
-        require(!ended, "auctionEnd has already been called.");
 
         if (highestBid != 0) {
             // Sending back the money by simply using
@@ -81,7 +96,7 @@ contract MawkAuction is IBidder {
     }
 
 
-   function pendingReturn(address sender) public view returns (uint) {
+    function pendingReturn(address sender) public view returns (uint) {
         return pendingReturns[sender];
     }
 
