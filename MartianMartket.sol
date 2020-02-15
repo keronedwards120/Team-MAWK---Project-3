@@ -12,7 +12,7 @@ contract MartianMarket is ERC721Full, Ownable {
 
     Counters.Counter token_ids;
 
-    address payable foundation_address = msg.sender;
+    //address payable foundation_address = msg.sender;
 
     mapping(uint => MartianAuction) public auctions;
 
@@ -20,6 +20,8 @@ contract MartianMarket is ERC721Full, Ownable {
         require(_exists(token_id), "Land not registered!");
         _;
     }
+    
+    mapping(uint => address) public token_owner;
     
     //event RegisterItem (uint token_id, address owner, string uri);
     event Verify(uint token_id);
@@ -29,18 +31,24 @@ contract MartianMarket is ERC721Full, Ownable {
         uint token_id = token_ids.current();
         _mint(msg.sender, token_id);
         _setTokenURI(token_id, uri);
-        createAuction(token_id);
+        createAuction(token_id, msg.sender);
+        token_owner[token_id]=msg.sender;
         //emit RegisterItem(token_id, msg.sender, uri);
     }
 
-    function createAuction(uint token_id) public  {
-        auctions[token_id] = new MartianAuction(foundation_address);
+    function createAuction(uint token_id, address payable beneficiary) public  {
+        auctions[token_id] = new MartianAuction(beneficiary);
     }
 
     function endAuction(uint token_id) public onlyOwner landRegistered(token_id) {
         MartianAuction auction = auctions[token_id];
         auction.auctionEnd();
-        safeTransferFrom(owner(), auction.highestBidder(), token_id);
+        //safeTransferFrom(token_owner[token_id], auction.highestBidder(), token_id);
+        token_owner[token_id]=auction.highestBidder();
+    }
+    
+    function checkOwner(uint token_id) public view returns(address){
+        return token_owner[token_id];
     }
 
     function auctionEnded(uint token_id) public view returns(bool) {
@@ -79,4 +87,3 @@ contract MartianMarket is ERC721Full, Ownable {
         return auction.verifycheck();
     }
 }
-
