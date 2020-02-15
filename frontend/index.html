@@ -21,23 +21,21 @@
     <hr>
 
     <h5>Open to Bidder</h5>
-    <ul id="dapp-opensource" class="collapsible"></ul>
+    <ul id="dapp-bidder" class="collapsible"></ul>
 
-    <h5>Open to Auction House</h5>
-    <ul id="dapp-copyrights" class="collapsible"></ul>
+    <h5 class="dapp-admin">Open to Auction House</h5>
+    <ul id="dapp-auctionHouse" class="collapsible dapp-admin"></ul>
 
     <div class="col s12 m6">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
           <span class="card-title"><input id="dapp-copyright-name" placeholder="Item name..." /></span>
-          <p><input id="dapp-copyright-description" placeholder="Description..."/></p>
-          <p><input id="seller-address" placeholder="Wallet address..."></p>
           <p>Image: <input id="dapp-copyright-image" type="file" /></p>
           <p><input id="dapp-pinata-api-key" placeholder="Pinata API Key"/></p>
           <p><input id="dapp-pinata-secret-api-key" placeholder="Pinata Secret API Key" type="password" /></p>
           <p>Note: Pinata requests are done locally via your browser. Your keys are not shared with any party except Pinata.</p>
         </div>
-        <div class="card-action"><a id="dapp-copyright" href="#" onclick="dApp.copyrightWork()">Register</a></div>
+        <div class="card-action"><a id="dapp-copyright" href="#" onclick="dApp.register()">Register</a></div>
       </div>
     </div>
 
