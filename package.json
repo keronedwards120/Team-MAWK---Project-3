@@ -1,0 +1,23 @@
+{
+  "name": "Team-MAWK---Project-3",
+  "version": "1.0.0",
+  "description": "Project 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keronedwards120/Team-MAWK---Project-3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keronedwards120/Team-MAWK---Project-3/issues"
+  },
+  "homepage": "https://github.com/keronedwards120/Team-MAWK---Project-3#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

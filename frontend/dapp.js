@@ -1,7 +1,8 @@
 // Change this address to match your deployed contract!
-const contract_address = "0x7A8DF91Ba10F548593b1ff1BE47577EeA2656B9d";
-
+const contract_address = "0x1F7bC26231B3E0E02754A1D0a95f28460DF1905f";
+debugger;
 const dApp = {
+
   ethEnabled: function() {
     // If the browser has MetaMask installed
     if (window.ethereum) {
@@ -141,11 +142,11 @@ const dApp = {
     //const description = $("#dapp-copyright-description").val();
     const image = document.querySelector('input[type="file"]');
 
-    const pinata_api_key = $("#dapp-pinata-api-key").val();
-    const pinata_secret_api_key = $("#dapp-pinata-secret-api-key").val();
+    const pinata_api_key = '0cbc4041aeaa6236e66b';
+    const pinata_secret_api_key = '8b053ea993535d56f0dfbf7fa17a253d77dbe09f442a04335105c65edfcce86c';
 
     if (!pinata_api_key || !pinata_secret_api_key || !name || !image) {
-      M.toast({ html: "Please fill out then entire form!" });
+      M.toast({ html: "Please fill out the Name of the Item!" });
       return;
     }
 

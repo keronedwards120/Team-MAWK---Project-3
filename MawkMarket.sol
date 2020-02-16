@@ -1,4 +1,4 @@
-pragma solidity >=0.4.22 <0.6.0;
+pragma solidity >=0.4.22 <=0.6.2;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721Full.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/ownership/Ownable.sol";
@@ -20,7 +20,7 @@ contract MawkMarket is IBidder,ICommon,ERC721Full,Ownable {
     mapping(address => Seller) public seller_list;
     mapping(uint => Item) public item_list;
     
-    event Verify(uint item_id, string memory uri);
+    event Verify(uint item_id, string uri);
 
 
     modifier sellerRegistered(address payable _address) {
