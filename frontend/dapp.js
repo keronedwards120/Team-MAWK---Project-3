@@ -66,7 +66,7 @@ const dApp = {
         </div>
       </li>`
     );
-    location.reload();
+    //location.reload();
   },
   verify: async function(event){
     const tokenId = $(event.target).attr("id");
