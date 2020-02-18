@@ -286,7 +286,7 @@ const dApp = {
       this.contractAddress,
       { defaultAccount: this.accounts[0] }
     );
-    //console.log("Contract object", this.contract);
+    console.log("Contract object", this.contract);
     this.isAdmin = this.accounts[0] == await this.marsContract.methods.owner().call();
     //console.log(this.isAdmin);
     await this.updateUI();
