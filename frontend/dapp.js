@@ -287,7 +287,7 @@ const dApp = {
       { defaultAccount: this.accounts[0] }
     );
     console.log("Contract object", this.marsContract);
-    this.isAdmin = this.accounts[0] == await this.marsContract.methods.owner().call();
+    this.isAdmin = this.accounts[0] == await this.marsContract.methods.owner();
     //console.log(this.isAdmin);
     await this.updateUI();
   }
