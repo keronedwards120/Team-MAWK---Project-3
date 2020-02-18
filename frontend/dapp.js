@@ -49,8 +49,8 @@ const dApp = {
   sendtoHouse: async function(){
     await this.collectVars();
     let tokenId = (await this.tokens.length)-1;
-    //console.log(this.tokens.length);
-    //console.log(tokenId);
+    console.log(await this.tokens.length);
+    console.log(tokenId);
     let token = await this.tokens[tokenId];
     //token.verify = false;
     //console.log(token.verify);
