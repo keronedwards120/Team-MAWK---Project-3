@@ -21,7 +21,6 @@ Team: Alexis Schottenstein, Keron Edwards, Manpreet Padam, Weijing Wang
 ## dApp Demo
 Click [here](https://keronedwards120.github.io/Team-MAWK---Project-3/frontend/index.html) to launch the MawkMarket application.
 
-
 In our test environment we upload pictures of puppies that can be bid on. We hope in future we could add further data of the animals within the contract structure, for quicker purchasing and verification of breeds and quality. 
 ![Auction Dog Pictures](imgs/AuctionBlockChain.png)
 - - -
@@ -32,16 +31,16 @@ The Ethereum virtual machine and smart contracts are key elements of Ethereum, a
 
 ### Features of a contract written in a code-language
 1. Universal code-language will be recognized by the computer explicitly 
-2. Program code always returns the same result if the input data is the saem. 
-3. Contract is signed using a digital signature, which is diffuclt to forge. 
+2. Program code always returns the same result if the input data is the same. 
+3. Contract is signed using a digital signature, which is difficult to forge. 
 3. There is an opportunity to test such a contract
 
 ### What you need to know about smart contracts
-1. Smart contracts allow counterparties to interact without having third parties involved. 
-2. Smar contracts are easier to audit than traditional contracts
+1. Smart contracts allow counter-parties to interact without having third parties involved. 
+2. Smart contracts are easier to audit than traditional contracts
 3. There are different types of smart contract protocols and different implementation methods. 
-4. They allow the management of digitial assests that are stored ona specific platform. 
-5. Initiation of the contract can be performedd either manually or automatically. 
+4. They allow the management of digital assets that are stored on a specific platform. 
+5. Initiation of the contract can be performed either manually or automatically. 
 
 ### Limitations of current auctioning system
 1. Auctions are not transparent. 
@@ -61,7 +60,7 @@ The Ethereum virtual machine and smart contracts are key elements of Ethereum, a
 
 
 ## Downloads & Accounts created
-- Remix - we recommend installing locally verus only using the online version that does not allow to save files as you are working. [download instructions](https://medium.com/coinmonks/setting-up-remix-ide-for-solidity-development-1a30f227b600)
+- Remix - we recommend installing locally versus only using the online version that does not allow to save files as you are working. [download instructions](https://medium.com/coinmonks/setting-up-remix-ide-for-solidity-development-1a30f227b600)
 - Metamask - [Website](https://metamask.io/)
 - Piniata Account [Website](https://pinata.cloud/)
 - Test Ether -  [Ropsten Faucet](https://faucet.ropsten.be/) you can test on any desired network or locally using ganache. 
@@ -70,9 +69,9 @@ The Ethereum virtual machine and smart contracts are key elements of Ethereum, a
 ## Auction Application Description
 - - -
 
-The backend layer is considered first, represented by the smart contract that manages the auction, while conected to Web3 front-end we utilize Remix in this example to compile and deploy via metamask. However, there are alternative platforms to test and deploy, including truffle suite and ganache. As well as via visual studio code with their marketplace add-on. We found Remix as an unsifficient editor during the writing of the code. 
+The backend layer is considered first, represented by the smart contract that manages the auction, while connected to Web3 front-end we utilize Remix in this example to compile and deploy via metamask. However, there are alternative platforms to test and deploy, including truffle suite and ganache. As well as via visual studio code with their marketplace add-on. We found Remix as an insufficient editor during the writing of the code. 
 
-In our work flow, An owner of of good, whether physical or not, usues our dApp front-end (using javascript and html) to upload an image and any other descriptions (features to implement in future releases)to sell to the public. The owner deploys the contract to the blockchain and becomes the auction owner. The auction is open after the auction house *verifies* the good via the front-end interface. once the bidding period is over, the highest bidder wins the auction, and the other participants withdraw their bids and can do so in real-time. In this example, the bid must outbid the previous bidder. If 100ETH is bid 101ETH must be bid to become the highest bidder. 
+In our work flow, An owner of of good, whether physical or not, uses our dApp front-end (using javascript and html) to upload an image and any other descriptions (features to implement in future releases)to sell to the public. The owner deploys the contract to the blockchain and becomes the auction owner. The auction is open after the auction house *verifies* the good via the front-end interface. once the bidding period is over, the highest bidder wins the auction, and the other participants withdraw their bids and can do so in real-time. In this example, the bid must outbid the previous bidder. If 100ETH is bid 101ETH must be bid to become the highest bidder. 
 
 Furthermore, the auction owner can cancel the auction in exceptional cases, and must also be allowed, at the end of the auction, to withdraw the winning bid. The auction interaction flow is illustrated in the following diagram:
 
@@ -84,6 +83,7 @@ Furthermore, the auction owner can cancel the auction in exceptional cases, and 
 To write our auction contract, we will use Solidity, which is the most popular language used to write smart contracts for the Ethereum blockchain. It's a JavaScript-like language, compiled into bytecode running in the Ethereum virtual machine. If you are familiar with Object-Oriented Programming, learning to write Solidity contracts should be fairly straightforward. Through this auction example, I'll try to lay out the basic and important features of Solidity.
 
 Our contract design will be simple. In the first step, we will create an abstract contract, in which we will declare our elementary functions and events. Then, we will use inheritance to create a compliant implementation—a contract with the exact same functions implemented. Abstract contracts help us to decouple the definition of a contract from its implementation, providing better extensibility and code readability.
+
 
 ![Mawk Contract Flow](imgs/key_inputs.png)
 <details>
@@ -305,19 +305,22 @@ contract MartianMarket is ERC721Full, Ownable {
 # Futher feature builds of MAWK Auction to include:
 
 Having built the proof of concept we invision further features to the application to include:
-1. Tracking of goods and further verficiation in shipment of winning bids. 
-2. Allowing donations to be given for tracking and distribution purproses in times of criss. 
-3. Further verifications in place via IFPS & NLP to establish shipping orders and aid in supply chain management. 
-4. Build the front-end marketplace that includes cross boarder payments, 
+1. Tracking of goods and further verification in shipment of winning bids.
+2. Allowing donations to be given for tracking and distribution  in times of crises.
+3. Further verifications in place via IFPS & NLP to establish shipping orders and aid in supply chain management.
+4. Build the front-end marketplace that includes cross border payments,
 
-## Tokenezation 
+
+## Tokenization 
 
 By establishing our own coin and allows owners to create their own tokens to transact their goods on, this way we are reaching a wider network of participants. They can then further transact without the fear of malicious acts and create a network of consensus, that meet the business needs of each industry and stabilizes cost.
 
 ### Opportunities that tokenization can bring
-1. Creating gloabl dentralized data registries 
-2. Creaging closely integrates systems with high modularity and distribution of operational responsibility 
-3. Real-time and simple audit of an accounting system 
-4. Moving and trading assets on the Internet that has no borders(the possibility to creathe the Financial Internet)
+1. Creating global decentralized data registries
+2. Creating closely integrates systems with high modularity and distribution of operational responsibility
+3. Real-time and simple audit of an accounting system
+4. Moving and trading assets on the Internet that has no borders(the possibility to create the the Financial Internet)
+
+
 
 
