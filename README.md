@@ -2,7 +2,7 @@
 
 ![project image](imgs/readmeImage.jpg)
 
-Team: Alexis Schottenstein, Keron Edwards, Manpreet Padam, Weijing Wang
+Team: Alexis Schottenstein, Keron Edwards, Manpreet Padam, Weiqing Wang
 
 - [MAWK Auction dApp Project](#mawk-auction-dapp-project)
   * [dApp Demo](#dapp-demo)
