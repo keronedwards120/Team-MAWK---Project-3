@@ -17,7 +17,7 @@ Team: Alexis Schottenstein, Keron Edwards, Manpreet Padam, Weijing Wang
     + [Opportunities that tokenization can bring](#opportunities-that-tokenization-can-bring)
 - - -
 ## dApp Demo
-Click [here](frontend/index2.html) to launch the MawkMarket application.
+Click [here](https://keronedwards120.github.io/Team-MAWK---Project-3/frontend/index.html) to launch the MawkMarket application.
 
 
 In our test environment we upload pictures of puppies that can be bid on. We hope in future we could add further data of the animals within the contract structure, for quicker purchasing and verification of breeds and quality. 
