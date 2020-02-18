@@ -6,7 +6,6 @@ contract MawkAuction {
     // Current state of the auction.
     address public highestBidder;
     uint public highestBid;
-
     // Allowed withdrawals of previous bids
     mapping(address => uint) pendingReturns;
 

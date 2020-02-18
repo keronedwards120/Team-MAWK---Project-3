@@ -12,8 +12,7 @@ contract MawkMarket is ERC721Full, Ownable {
 
     Counters.Counter token_ids;
 
-    //address payable foundation_address = msg.sender;
-
+    address payable foundation_address = msg.sender;
     mapping(uint => MawkAuction) public auctions;
 
     modifier landRegistered(uint token_id) {
@@ -25,6 +24,7 @@ contract MawkMarket is ERC721Full, Ownable {
     
     //event RegisterItem (uint token_id, address owner, string uri);
     event Verify(uint token_id);
+
 
     function registerLand(string memory uri) public payable {
         token_ids.increment();
@@ -49,6 +49,10 @@ contract MawkMarket is ERC721Full, Ownable {
     
     function checkOwner(uint token_id) public view returns(address){
         return token_owner[token_id];
+    }
+
+    function address_owner() public view returns(address){
+        return foundation_address;
     }
 
     function auctionEnded(uint token_id) public view returns(bool) {
