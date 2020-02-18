@@ -3,4 +3,4 @@ Project 3
 
 ### Demo App
 
-Click [here](frontend/index.html) to launch the MawkMarket application.
+Click [here](frontend/index2.html) to launch the MawkMarket application.
