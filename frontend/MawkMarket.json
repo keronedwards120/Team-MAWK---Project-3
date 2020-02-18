@@ -159,7 +159,7 @@
 		"name": "auctions",
 		"outputs": [
 			{
-				"internalType": "contract MartianAuction",
+				"internalType": "contract MawkAuction",
 				"name": "",
 				"type": "address"
 			}

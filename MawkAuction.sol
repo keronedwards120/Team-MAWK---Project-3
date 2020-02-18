@@ -1,6 +1,6 @@
 pragma solidity >=0.5.0;
 
-contract MartianAuction {
+contract MawkAuction {
     address payable public beneficiary;
 
     // Current state of the auction.
@@ -117,4 +117,3 @@ contract MartianAuction {
         beneficiary.transfer(highestBid);
     }
 }
-
