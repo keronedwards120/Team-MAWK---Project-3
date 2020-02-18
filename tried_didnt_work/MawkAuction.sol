@@ -1,8 +1,10 @@
 pragma solidity >=0.5.0;
 
-contract MartianAuction {
-    address payable public beneficiary;
+import "./IBidder.sol";
 
+contract MawkAuction is IBidder {
+    address payable public beneficiary;
+    bool public isExist;
     // Current state of the auction.
     address public highestBidder;
     uint public highestBid;
@@ -13,9 +15,8 @@ contract MartianAuction {
     // Set to true at the end, disallows any change.
     // By default initialized to `false`.
     bool public ended;
-    bool public verified;
 
-    // Events that will be emitted on changes.
+    // Events that will be emitted on changes
     event HighestBidIncreased(address bidder, uint amount);
     event AuctionEnded(address winner, uint amount);
 
@@ -31,6 +32,7 @@ contract MartianAuction {
         address payable _beneficiary
     ) public {
         beneficiary = _beneficiary;
+        isExist = true;
     }
 
     /// Bid on the auction with the value sent
@@ -60,33 +62,27 @@ contract MartianAuction {
         emit HighestBidIncreased(sender, msg.value);
     }
 
-    /// Withdraw a bid that was overbid.
-    function withdraw(address payable bidder) public {
-        uint amount = pendingReturns[bidder];
+  /// Withdraw a bid that was overbid.
+    function withdraw() public returns (bool) {
+        uint amount = pendingReturns[msg.sender];
         if (amount > 0) {
             // It is important to set this to zero because the recipient
             // can call this function again as part of the receiving call
             // before `send` returns.
-            bidder.transfer(amount);
-            pendingReturns[bidder] = 0;
-        //     if (!msg.sender.send(amount)) {
-        //         // No need to call throw here, just reset the amount owing
-        //         pendingReturns[msg.sender] = amount;
-        //         return false;
-        //     }
+            pendingReturns[msg.sender] = 0;
+
+            if (!msg.sender.send(amount)) {
+                // No need to call throw here, just reset the amount owing
+                pendingReturns[msg.sender] = amount;
+                return false;
+            }
         }
+        return true;
     }
 
-    function pendingReturn(address sender) public view returns (uint) {
+
+   function pendingReturn(address sender) public view returns (uint) {
         return pendingReturns[sender];
-    }
-    
-    function verify() public {
-        verified=true;
-    }
-    
-    function verifycheck() public view returns (bool){
-        return verified;
     }
 
     /// End the auction and send the highest bid
@@ -107,7 +103,7 @@ contract MartianAuction {
 
         // 1. Conditions
         require(!ended, "auctionEnd has already been called.");
-        //require(msg.sender == beneficiary, "You are not the auction beneficiary");
+        require(msg.sender == beneficiary, "You are not the auction beneficiary");
 
         // 2. Effects
         ended = true;
@@ -116,5 +112,6 @@ contract MartianAuction {
         // 3. Interaction
         beneficiary.transfer(highestBid);
     }
-}
 
+
+}

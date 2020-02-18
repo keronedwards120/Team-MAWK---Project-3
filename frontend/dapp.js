@@ -278,7 +278,7 @@ const dApp = {
 
     this.accounts = await window.web3.eth.getAccounts();
     this.contractAddress = contract_address;
-    this.marsJson = await (await fetch("./MartianMarket.json")).json();
+    this.marsJson = await (await fetch("./MawkMarket.json")).json();
 
     this.marsContract = new window.web3.eth.Contract(
       this.marsJson,
