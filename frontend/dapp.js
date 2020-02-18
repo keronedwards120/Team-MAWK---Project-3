@@ -17,7 +17,7 @@ const dApp = {
     this.totalSupply = await this.marsContract.methods.totalSupply().call();
     console.log(this.totalSupply);
     const fetchMetadata = (reference_uri) => fetch(`https://gateway.pinata.cloud/ipfs/${reference_uri.replace("ipfs://", "")}`, { mode: "cors" }).then((resp) => resp.json());
-    for await (let i = 1; i <= this.totalSupply; i++) {
+    for (let i = 1; i <= this.totalSupply; i++) {
       try {
         const token_uri = await this.marsContract.methods.tokenURI(i).call();
         //console.log('token uri', token_uri)
