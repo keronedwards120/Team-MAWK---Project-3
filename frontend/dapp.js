@@ -1,5 +1,5 @@
 // Change this address to match your deployed contract!
-const contract_address = "0x242A1997d2230C266Fb715eeC396610ca74Ed2ec";
+const contract_address = "0x6d7c55c108F936E78D94Ef9B743c5918CCaab5DB";
 //debugger;
 const dApp = {
 
@@ -15,7 +15,7 @@ const dApp = {
   collectVars: async function(){
     this.tokens = [];
     this.totalSupply = await this.marsContract.methods.totalSupply().call();
-
+    console.log(this.totalSupply);
     const fetchMetadata = (reference_uri) => fetch(`https://gateway.pinata.cloud/ipfs/${reference_uri.replace("ipfs://", "")}`, { mode: "cors" }).then((resp) => resp.json());
     for (let i = 1; i <= this.totalSupply; i++) {
       try {
@@ -48,10 +48,10 @@ const dApp = {
   },
   sendtoHouse: async function(){
     await this.collectVars();
-    let tokenId = (await this.tokens.length)-1;
-    //console.log(this.tokens.length);
-    //console.log(tokenId);
-    let token = await this.tokens[tokenId];
+    let tokenId = await this.tokens.length;
+    console.log(await this.tokens.length);
+    console.log(tokenId);
+    let token = await this.tokens[tokenId-1];
     //token.verify = false;
     //console.log(token.verify);
     //console.log(token);
@@ -286,7 +286,7 @@ const dApp = {
       this.contractAddress,
       { defaultAccount: this.accounts[0] }
     );
-    //console.log("Contract object", this.contract);
+    console.log("Contract object", this.marsContract);
     this.isAdmin = this.accounts[0] == await this.marsContract.methods.owner().call();
     //console.log(this.isAdmin);
     await this.updateUI();
