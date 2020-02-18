@@ -1,5 +1,5 @@
 // Change this address to match your deployed contract!
-const contract_address = "0xfd738Fa579523C7D0F8b2bb216283D34d2f73c13";
+const contract_address = "0x242A1997d2230C266Fb715eeC396610ca74Ed2ec";
 //debugger;
 const dApp = {
 
