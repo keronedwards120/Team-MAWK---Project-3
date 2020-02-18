@@ -1,5 +1,5 @@
 // Change this address to match your deployed contract!
-const contract_address = "0x2553273b73c730dc4dD7842230297EB0e4223f72";
+const contract_address = "0x070d33254c137Ce1BA602176631627e293D346BB";
 //debugger;
 const dApp = {
 
@@ -287,7 +287,7 @@ const dApp = {
       { defaultAccount: this.accounts[0] }
     );
     console.log("Contract object", this.marsContract);
-    this.isAdmin = this.accounts[0] == await this.marsContract.methods.owner().call();
+    this.isAdmin = this.accounts[0] == await this.marsContract.methods.address_owner().call();
     console.log(this.isAdmin);
     await this.updateUI();
   }
