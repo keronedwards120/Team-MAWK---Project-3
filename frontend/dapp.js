@@ -1,5 +1,5 @@
 // Change this address to match your deployed contract!
-const contract_address = "0x450a3759CDa01C1E083B18219abC9Db520B19cda";
+const contract_address = "0x242A1997d2230C266Fb715eeC396610ca74Ed2ec";
 //debugger;
 const dApp = {
 
@@ -66,6 +66,7 @@ const dApp = {
         </div>
       </li>`
     );
+    location.reload();
   },
   verify: async function(event){
     const tokenId = $(event.target).attr("id");
@@ -104,7 +105,7 @@ const dApp = {
     this.tokens.forEach(async (token) => {
       //console.log(token.verify);
       let token_id = token.tokenId;
-      var token_verify = Boolean (await this.marsContract.methods.verifycheck(token_id).call());
+      let token_verify = Boolean (await this.marsContract.methods.verifycheck(token_id).call());
       //console.log(token_verify);
       let name = token.name;  
       let image = token.image;
