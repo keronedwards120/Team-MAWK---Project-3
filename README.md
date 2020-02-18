@@ -11,7 +11,7 @@ Team: Alexis Schottenstein, Keron Edwards, Manpreet Padam, Weijing Wang
     + [What you need to know about smart contracts](#what-you-need-to-know-about-smart-contracts)
     + [Limitations of current auctioning system](#limitations-of-current-auctioning-system)
     + [Benefits of blockchain auctions](#benefits-of-blockchain-auctions)
-  * [Downloads & Accounts created](#downloads---accounts-created)
+  * [Set UP](#set-up)
   * [Auction Application Description](#auction-application-description)
     + [Auction Contract Code in Solidity](#auction-contract-code-in-solidity)
 - [Futher feature builds of MAWK Auction to include:](#futher-feature-builds-of-mawk-auction-to-include-)
@@ -57,14 +57,15 @@ The Ethereum virtual machine and smart contracts are key elements of Ethereum, a
 4. No cancellation
 5. Scalable, reliable and transparent: thanks to the distributed repository protocol, each operation will be registered within the network in a way that is transparent, publicly verifiable and virtually impossible to falsify.
 
+- - -
 
-
-## Downloads & Accounts created
+## Set Up
+- Languages used: Solidity, HTML, JavaScript
 - Remix - we recommend installing locally versus only using the online version that does not allow to save files as you are working. [download instructions](https://medium.com/coinmonks/setting-up-remix-ide-for-solidity-development-1a30f227b600)
 - Metamask - [Website](https://metamask.io/)
 - Piniata Account [Website](https://pinata.cloud/)
 - Test Ether -  [Ropsten Faucet](https://faucet.ropsten.be/) you can test on any desired network or locally using ganache. 
-- Ganache - [Website](https://www.trufflesuite.com/ganache)
+- Ganache & Truffle Suite - [Website](https://www.trufflesuite.com/ganache)
 
 ## Auction Application Description
 - - -
